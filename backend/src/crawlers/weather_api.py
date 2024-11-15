@@ -63,6 +63,7 @@ class WeatherDataIngestion:
             from sqlalchemy import create_engine
             engine = create_engine(getenv('DATABASE_URL'))
             
+            # Insert data into database
             df.to_sql(
                 name=table_name,
                 con=engine,
