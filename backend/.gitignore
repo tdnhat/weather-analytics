@@ -118,6 +118,11 @@ __pypackages__/
 celerybeat-schedule
 celerybeat.pid
 
+# Ignore all .pem files
+*.pem
+
+mysql_data/
+
 # SageMath parsed files
 *.sage.py
 
