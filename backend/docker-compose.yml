@@ -1,7 +1,7 @@
 services:
   weather.data_ingestion:
     container_name: weather.data_ingestion
-    image: nhathuy16092003/weatherdataingestion
+    # image: nhathuy16092003/weatherdataingestion
     build:
       context: ./weather_data_ingestion
       dockerfile: Dockerfile
@@ -12,11 +12,13 @@ services:
         condition: service_healthy
     networks:
       - app-network
+    volumes:
+      - ./weather_data_ingestion:/app/weather_data_ingestion
     restart: always
 
   weather.databaseapi:
     container_name: weather.databaseapi
-    image: nhathuy16092003/weatherdatabaseapi
+    # image: nhathuy16092003/weatherdatabaseapi
     build:
       context: ./weather_databaseapi
       dockerfile: Dockerfile
@@ -27,9 +29,9 @@ services:
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+      timeout: 50s
+      retries: 5
+      start_period: 30s
     networks:
       - app-network
     restart: always

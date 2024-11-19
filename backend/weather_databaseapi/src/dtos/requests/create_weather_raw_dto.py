@@ -4,7 +4,7 @@ from typing import Optional
 
 class WeatherCreateDto(BaseModel):
     time_epoch: int
-    time: datetime
+    time: str
     temp_c: float
     temp_f: float
     is_day: int

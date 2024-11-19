@@ -13,6 +13,15 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Create directory and all parent directories if they don't exist
+RUN mkdir -p /app/weather_data_ingestion
+
+# Set full permissions (read/write/execute) for all users
+RUN chmod 777 /app/weather_data_ingestion
+
+# Switch to a non-root user
+USER 1000:1000
+
 # Copy the rest of the application
 COPY . .
 
