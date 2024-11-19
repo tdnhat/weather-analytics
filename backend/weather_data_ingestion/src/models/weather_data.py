@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 class Weather(BaseModel):
     time_epoch: Optional[int] = None
-    time: Optional[datetime] = None
+    time: Optional[str] = None
     temp_c: Optional[float] = None
     temp_f: Optional[float] = None
     is_day: Optional[int] = None
