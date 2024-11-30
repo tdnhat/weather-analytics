@@ -10,7 +10,7 @@ async def run_crawler():
     default_start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
 
     try:
-        log_file_path = '/app/weather_data_ingestion/weather_log.json'
+        log_file_path = '/app/weather_log.json'
 
         if os.path.exists(log_file_path):
             with open(log_file_path, 'r') as f:
@@ -34,7 +34,12 @@ if __name__ == "__main__":
     TWO_HOURS = 2 * 60 * 60  # 2 hours in seconds
     
     while True:
-        print(f"Starting crawler at {datetime.now()}")
-        asyncio.run(run_crawler())
-        print(f"Crawler finished at {datetime.now()}. Sleeping for 2 hours...")
-        time.sleep(TWO_HOURS)
+        try:
+            print(f"Starting crawler at {datetime.now()}")
+            asyncio.run(run_crawler())
+            print(f"Crawler finished at {datetime.now()}. Sleeping for 2 hours...")
+        except Exception as e:
+            print(f"Error occurred during crawling: {str(e)}")
+            print("Will retry in 2 hours...")
+        finally:
+            time.sleep(TWO_HOURS)
