@@ -1,22 +1,23 @@
 services:
-  weather.data_ingestion:
-    container_name: weather.data_ingestion
-    build:
-      context: ./weather_data_ingestion
-      dockerfile: Dockerfile
-    env_file:
-      - ./weather_data_ingestion/.env
-    depends_on:
-      weather.databaseapi:
-        condition: service_healthy
-    networks:
-      - app-network
-    volumes:
-      - ./weather_data_ingestion:/app
-    restart: always
+  # weather.data_ingestion:
+  #   container_name: weather.data_ingestion
+  #   build:
+  #     context: ./weather_data_ingestion
+  #     dockerfile: Dockerfile
+  #   env_file:
+  #     - ./weather_data_ingestion/.env
+  #   depends_on:
+  #     weather.databaseapi:
+  #       condition: service_healthy
+  #   networks:
+  #     - app-network
+  #   volumes:
+  #     - ./weather_data_ingestion:/app
+  #   restart: always
 
   weather.databaseapi:
     container_name: weather.databaseapi
+    image: nhathuy16092003/weatherdatabaseapi:latest
     build:
       context: ./weather_databaseapi
       dockerfile: Dockerfile
@@ -34,41 +35,41 @@ services:
       - app-network
     restart: always
 
-  zookeeper:
-    image: confluentinc/cp-zookeeper:7.5.1
-    volumes:
-      - zookeeper_data:/var/lib/zookeeper/data
-      - zookeeper_log:/var/lib/zookeeper/log
-    networks:
-      - app-network
+#   zookeeper:
+#     image: confluentinc/cp-zookeeper:7.5.1
+#     volumes:
+#       - zookeeper_data:/var/lib/zookeeper/data
+#       - zookeeper_log:/var/lib/zookeeper/log
+#     networks:
+#       - app-network
 
-  kafka:
-    image: confluentinc/cp-kafka:7.5.1
-    volumes:
-      - kafka_data:/var/lib/kafka/data
-    networks:
-      - app-network
+#   kafka:
+#     image: confluentinc/cp-kafka:7.5.1
+#     volumes:
+#       - kafka_data:/var/lib/kafka/data
+#     networks:
+#       - app-network
 
-  kafka-ui:
-    image: provectuslabs/kafka-ui:latest    
-    networks:
-      - app-network
+#   kafka-ui:
+#     image: provectuslabs/kafka-ui:latest    
+#     networks:
+#       - app-network
 
-  debezium:
-    image: debezium/connect:2.5
-    networks:
-      - app-network
+#   debezium:
+#     image: debezium/connect:2.5
+#     networks:
+#       - app-network
   
-  debezium-connector-config:
-    image: curlimages/curl
-    networks:
-      - app-network
+#   debezium-connector-config:
+#     image: curlimages/curl
+#     networks:
+#       - app-network
 
-volumes:
-  logs:
-  zookeeper_data:
-  zookeeper_log:
-  kafka_data:
+# volumes:
+#   logs:
+#   zookeeper_data:
+#   zookeeper_log:
+#   kafka_data:
 
 networks:
   app-network:
