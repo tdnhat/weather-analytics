@@ -16,7 +16,7 @@ class HistoricalWeatherCrawler:
     def __init__(self):
         self.api_key = WEATHER_API_KEY
         self.base_url = WEATHER_API_BASE_URL
-        self.log_file = '/app/weather_data_ingestion/weather_log.json'
+        self.log_file = '/app/weather_log.json'
         # Setup logging
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)

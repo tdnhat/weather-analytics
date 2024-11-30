@@ -1,7 +1,6 @@
 services:
   weather.data_ingestion:
     container_name: weather.data_ingestion
-    # image: nhathuy16092003/weatherdataingestion
     build:
       context: ./weather_data_ingestion
       dockerfile: Dockerfile
@@ -13,12 +12,11 @@ services:
     networks:
       - app-network
     volumes:
-      - ./weather_data_ingestion:/app/weather_data_ingestion
+      - ./weather_data_ingestion:/app
     restart: always
 
   weather.databaseapi:
     container_name: weather.databaseapi
-    # image: nhathuy16092003/weatherdatabaseapi
     build:
       context: ./weather_databaseapi
       dockerfile: Dockerfile
@@ -28,13 +26,49 @@ services:
       - ./weather_databaseapi/.env
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 30s
-      timeout: 50s
-      retries: 5
-      start_period: 30s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     networks:
       - app-network
     restart: always
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.1
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+      - zookeeper_log:/var/lib/zookeeper/log
+    networks:
+      - app-network
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.1
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - app-network
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest    
+    networks:
+      - app-network
+
+  debezium:
+    image: debezium/connect:2.5
+    networks:
+      - app-network
+  
+  debezium-connector-config:
+    image: curlimages/curl
+    networks:
+      - app-network
+
+volumes:
+  logs:
+  zookeeper_data:
+  zookeeper_log:
+  kafka_data:
 
 networks:
   app-network:

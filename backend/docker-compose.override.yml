@@ -1,0 +1,161 @@
+services:
+  zookeeper:
+    container_name: zookeeper
+    environment:
+      - ZOOKEEPER_CLIENT_PORT=2181
+      - ZOOKEEPER_TICK_TIME=2000
+    ports:
+      - "2181:2181"
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc localhost 2181 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  kafka:
+    container_name: kafka
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:29092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      - KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=1
+      - KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=1
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "kafka-topics --bootstrap-server kafka:9092 --list || exit 1",
+        ]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+
+  debezium:
+    container_name: debezium
+    environment:
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - GROUP_ID=1
+      - CONFIG_STORAGE_TOPIC=connect_configs
+      - OFFSET_STORAGE_TOPIC=connect_offsets
+      - STATUS_STORAGE_TOPIC=connect_statuses
+      - KEY_CONVERTER=org.apache.kafka.connect.json.JsonConverter
+      - VALUE_CONVERTER=org.apache.kafka.connect.json.JsonConverter
+      - ENABLE_DEBEZIUM_SCRIPTING=true
+      - CONNECT_REST_PORT=8083
+      - CONNECT_REST_ADVERTISED_HOST_NAME=debezium
+    ports:
+      - "8085:8083"
+    depends_on:
+      - kafka
+      - weather.databaseapi
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8083/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  debezium-connector-config:
+    container_name: debezium-connector-config
+    depends_on:
+      debezium:
+        condition: service_healthy
+    restart: on-failure
+    command: >
+      -X POST http://debezium:8083/connectors -H "Content-Type: application/json" -d '{
+        "name": "weather-mysql-connector",
+        "config": {
+          "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+          "database.hostname": "'${DB_HOST}'",
+          "database.port": "'${DB_PORT}'",
+          "database.user": "'${DB_USER}'",
+          "database.password": "'${DB_PASSWORD}'",
+          "database.server.name": "weather-mysql",
+          "database.server.id": "1",
+          "database.include.list": "'${DB_NAME}'",
+
+          "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+          "schema.history.internal.kafka.topic": "schema-changes.weather",
+          
+          "include.schema.changes": "true",
+          "topic.prefix": "weather-mysql",
+          "database.history.store.only.captured.tables.ddl": "true",
+          "snapshot.mode": "initial",
+
+          "time.precision.mode": "connect",
+          "datetime.handling.mode": "string"
+        }
+      }'
+
+  kafka-ui:
+    container_name: kafka-ui
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+    ports:
+      - "8088:8080"
+    depends_on:
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  #   weather.dataanalysis:
+  #     container_name: weather.dataanalysis
+  #     environment:
+  #       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+  #       - DATABASE_API_URL=http://weatherforecast.databaseapi:8080
+  #       - REDIS_URL=${REDIS_URL}
+  #     ports:
+  #       - "8087:8000"
+  #     depends_on:
+  #       kafka:
+  #         condition: service_healthy
+  #       weatherforecast.databaseapi:
+  #         condition: service_healthy
+
+  # weather.dataanalysis.worker:
+  #   container_name: weather.dataanalysis.worker
+  #   command: celery -A app.tasks.weather_tasks worker --loglevel=info
+  #   environment:
+  #     - WORKER_ID=worker
+  #     - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+  #     - DATABASE_API_URL=http://weatherforecast.databaseapi:8080
+  #     - REDIS_URL=${REDIS_URL}
+  #     - CELERY_WORKER=true
+  #   depends_on:
+  #     kafka:
+  #       condition: service_healthy
+  #     weatherforecast.databaseapi:
+  #       condition: service_healthy
+
+  # weather.dataanalysis.beat:
+  #   container_name: weather.dataanalysis.beat
+  #   command: celery -A app.tasks.weather_tasks beat --loglevel=info
+  #   environment:
+  #     - WORKER_ID=beat
+  #     - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+  #     - DATABASE_API_URL=http://weatherforecast.databaseapi:8080
+  #     - REDIS_URL=${REDIS_URL}
+  #     - CELERY_WORKER=false
+  #   depends_on:
+  #     kafka:
+  #       condition: service_healthy
+  #     weatherforecast.databaseapi:
+  #       condition: service_healthy

@@ -1,0 +1,1917 @@
+[
+    {
+        "end_date": "2023-11-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:47:46.589860"
+    },
+    {
+        "end_date": "2023-11-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:48:04.951228"
+    },
+    {
+        "end_date": "2023-11-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:48:23.404396"
+    },
+    {
+        "end_date": "2023-11-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:48:41.799739"
+    },
+    {
+        "end_date": "2023-11-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:49:00.356938"
+    },
+    {
+        "end_date": "2023-11-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:49:18.772433"
+    },
+    {
+        "end_date": "2023-11-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:49:37.739024"
+    },
+    {
+        "end_date": "2023-11-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:53:23.477015"
+    },
+    {
+        "end_date": "2023-11-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:53:41.842015"
+    },
+    {
+        "end_date": "2023-11-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:54:00.532921"
+    },
+    {
+        "end_date": "2023-11-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:54:19.009046"
+    },
+    {
+        "end_date": "2023-11-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:54:37.711134"
+    },
+    {
+        "end_date": "2023-11-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:54:56.752471"
+    },
+    {
+        "end_date": "2023-11-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:55:15.496512"
+    },
+    {
+        "end_date": "2023-11-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:55:34.134219"
+    },
+    {
+        "end_date": "2023-11-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:55:53.596479"
+    },
+    {
+        "end_date": "2023-11-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:56:12.661330"
+    },
+    {
+        "end_date": "2023-11-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:56:31.687960"
+    },
+    {
+        "end_date": "2023-12-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:56:51.147553"
+    },
+    {
+        "end_date": "2023-12-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:57:10.703544"
+    },
+    {
+        "end_date": "2023-12-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:57:29.008180"
+    },
+    {
+        "end_date": "2023-12-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:57:47.803197"
+    },
+    {
+        "end_date": "2023-12-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:58:06.442453"
+    },
+    {
+        "end_date": "2023-12-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:58:24.921694"
+    },
+    {
+        "end_date": "2023-12-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:58:43.203833"
+    },
+    {
+        "end_date": "2023-12-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:59:02.180529"
+    },
+    {
+        "end_date": "2023-12-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:59:20.699918"
+    },
+    {
+        "end_date": "2023-12-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:59:39.114245"
+    },
+    {
+        "end_date": "2023-12-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T09:59:57.701922"
+    },
+    {
+        "end_date": "2023-12-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:00:16.782970"
+    },
+    {
+        "end_date": "2023-12-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:00:35.507614"
+    },
+    {
+        "end_date": "2023-12-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:00:54.818694"
+    },
+    {
+        "end_date": "2023-12-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:01:13.569489"
+    },
+    {
+        "end_date": "2023-12-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:01:32.606980"
+    },
+    {
+        "end_date": "2023-12-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:01:56.949260"
+    },
+    {
+        "end_date": "2023-12-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:02:16.183773"
+    },
+    {
+        "end_date": "2023-12-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:02:34.538310"
+    },
+    {
+        "end_date": "2023-12-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:02:53.399062"
+    },
+    {
+        "end_date": "2023-12-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:03:12.533168"
+    },
+    {
+        "end_date": "2023-12-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:03:32.169979"
+    },
+    {
+        "end_date": "2023-12-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:03:51.051356"
+    },
+    {
+        "end_date": "2023-12-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:04:09.857767"
+    },
+    {
+        "end_date": "2023-12-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:04:28.240492"
+    },
+    {
+        "end_date": "2023-12-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:04:47.030191"
+    },
+    {
+        "end_date": "2023-12-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:05:05.431483"
+    },
+    {
+        "end_date": "2023-12-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:05:23.917383"
+    },
+    {
+        "end_date": "2023-12-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:05:42.859142"
+    },
+    {
+        "end_date": "2023-12-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:06:01.371472"
+    },
+    {
+        "end_date": "2023-12-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:06:21.047936"
+    },
+    {
+        "end_date": "2024-01-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:06:40.733211"
+    },
+    {
+        "end_date": "2024-01-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:06:59.080589"
+    },
+    {
+        "end_date": "2024-01-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:07:17.498261"
+    },
+    {
+        "end_date": "2024-01-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:07:35.794119"
+    },
+    {
+        "end_date": "2024-01-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:07:54.948462"
+    },
+    {
+        "end_date": "2024-01-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:08:13.293023"
+    },
+    {
+        "end_date": "2024-01-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:08:32.373757"
+    },
+    {
+        "end_date": "2024-01-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:08:51.179827"
+    },
+    {
+        "end_date": "2024-01-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:09:09.621802"
+    },
+    {
+        "end_date": "2024-01-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:09:28.047449"
+    },
+    {
+        "end_date": "2024-01-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:09:47.087313"
+    },
+    {
+        "end_date": "2024-01-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:10:05.600787"
+    },
+    {
+        "end_date": "2024-01-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:10:24.453188"
+    },
+    {
+        "end_date": "2024-01-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:10:43.192985"
+    },
+    {
+        "end_date": "2024-01-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:11:01.934085"
+    },
+    {
+        "end_date": "2024-01-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:11:20.270158"
+    },
+    {
+        "end_date": "2024-01-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:11:38.738784"
+    },
+    {
+        "end_date": "2024-01-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:11:57.489730"
+    },
+    {
+        "end_date": "2024-01-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:12:15.987932"
+    },
+    {
+        "end_date": "2024-01-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:12:35.004151"
+    },
+    {
+        "end_date": "2024-01-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:12:53.630355"
+    },
+    {
+        "end_date": "2024-01-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:13:11.996711"
+    },
+    {
+        "end_date": "2024-01-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:13:30.506766"
+    },
+    {
+        "end_date": "2024-01-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:13:49.036462"
+    },
+    {
+        "end_date": "2024-01-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:14:07.633378"
+    },
+    {
+        "end_date": "2024-01-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:14:26.350678"
+    },
+    {
+        "end_date": "2024-01-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:14:45.253856"
+    },
+    {
+        "end_date": "2024-01-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:15:03.899209"
+    },
+    {
+        "end_date": "2024-01-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:15:22.341575"
+    },
+    {
+        "end_date": "2024-01-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:15:40.732909"
+    },
+    {
+        "end_date": "2024-01-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:15:59.218107"
+    },
+    {
+        "end_date": "2024-02-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:16:17.870654"
+    },
+    {
+        "end_date": "2024-02-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:16:36.597336"
+    },
+    {
+        "end_date": "2024-02-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:16:54.910659"
+    },
+    {
+        "end_date": "2024-02-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:17:13.406959"
+    },
+    {
+        "end_date": "2024-02-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:17:31.851748"
+    },
+    {
+        "end_date": "2024-02-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:17:50.391783"
+    },
+    {
+        "end_date": "2024-02-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:18:08.796206"
+    },
+    {
+        "end_date": "2024-02-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:18:27.374363"
+    },
+    {
+        "end_date": "2024-02-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:18:45.723310"
+    },
+    {
+        "end_date": "2024-02-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:19:04.125544"
+    },
+    {
+        "end_date": "2024-02-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:19:22.576780"
+    },
+    {
+        "end_date": "2024-02-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:19:41.230218"
+    },
+    {
+        "end_date": "2024-02-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:20:00.119174"
+    },
+    {
+        "end_date": "2024-02-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:20:18.586593"
+    },
+    {
+        "end_date": "2024-02-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:20:36.878733"
+    },
+    {
+        "end_date": "2024-02-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:20:55.351019"
+    },
+    {
+        "end_date": "2024-02-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:21:13.763889"
+    },
+    {
+        "end_date": "2024-02-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:21:32.223686"
+    },
+    {
+        "end_date": "2024-02-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:21:50.766837"
+    },
+    {
+        "end_date": "2024-02-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:22:09.210556"
+    },
+    {
+        "end_date": "2024-02-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:22:27.747062"
+    },
+    {
+        "end_date": "2024-02-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:22:49.745596"
+    },
+    {
+        "end_date": "2024-02-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:23:08.342278"
+    },
+    {
+        "end_date": "2024-02-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:23:26.839042"
+    },
+    {
+        "end_date": "2024-02-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:23:45.462927"
+    },
+    {
+        "end_date": "2024-02-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:24:04.363543"
+    },
+    {
+        "end_date": "2024-02-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:24:23.401188"
+    },
+    {
+        "end_date": "2024-02-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:24:41.892140"
+    },
+    {
+        "end_date": "2024-02-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:25:00.395044"
+    },
+    {
+        "end_date": "2024-03-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:25:18.945702"
+    },
+    {
+        "end_date": "2024-03-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:25:37.399368"
+    },
+    {
+        "end_date": "2024-03-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:25:56.019385"
+    },
+    {
+        "end_date": "2024-03-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:26:14.552772"
+    },
+    {
+        "end_date": "2024-03-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:26:32.993332"
+    },
+    {
+        "end_date": "2024-03-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:26:51.790239"
+    },
+    {
+        "end_date": "2024-03-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:27:10.572202"
+    },
+    {
+        "end_date": "2024-03-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:27:29.066245"
+    },
+    {
+        "end_date": "2024-03-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:27:47.698880"
+    },
+    {
+        "end_date": "2024-03-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:28:06.500626"
+    },
+    {
+        "end_date": "2024-03-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:28:24.945418"
+    },
+    {
+        "end_date": "2024-03-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:28:43.377074"
+    },
+    {
+        "end_date": "2024-03-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:29:02.270781"
+    },
+    {
+        "end_date": "2024-03-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:29:20.602823"
+    },
+    {
+        "end_date": "2024-03-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:29:39.132215"
+    },
+    {
+        "end_date": "2024-03-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:29:57.798372"
+    },
+    {
+        "end_date": "2024-03-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:30:16.299601"
+    },
+    {
+        "end_date": "2024-03-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:30:34.880867"
+    },
+    {
+        "end_date": "2024-03-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:30:53.575166"
+    },
+    {
+        "end_date": "2024-03-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:31:12.028410"
+    },
+    {
+        "end_date": "2024-03-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:31:30.548996"
+    },
+    {
+        "end_date": "2024-03-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:31:49.002613"
+    },
+    {
+        "end_date": "2024-03-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:32:08.345337"
+    },
+    {
+        "end_date": "2024-03-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:32:28.372184"
+    },
+    {
+        "end_date": "2024-03-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:32:48.387302"
+    },
+    {
+        "end_date": "2024-03-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:33:07.547082"
+    },
+    {
+        "end_date": "2024-03-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:33:26.313853"
+    },
+    {
+        "end_date": "2024-03-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:33:44.607042"
+    },
+    {
+        "end_date": "2024-03-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:34:03.114864"
+    },
+    {
+        "end_date": "2024-03-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:34:21.441928"
+    },
+    {
+        "end_date": "2024-03-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:34:39.881647"
+    },
+    {
+        "end_date": "2024-04-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:34:58.195230"
+    },
+    {
+        "end_date": "2024-04-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:35:17.231930"
+    },
+    {
+        "end_date": "2024-04-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:35:35.742130"
+    },
+    {
+        "end_date": "2024-04-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:35:54.235379"
+    },
+    {
+        "end_date": "2024-04-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:36:13.986841"
+    },
+    {
+        "end_date": "2024-04-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:36:32.658825"
+    },
+    {
+        "end_date": "2024-04-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:36:50.955566"
+    },
+    {
+        "end_date": "2024-04-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:37:09.445669"
+    },
+    {
+        "end_date": "2024-04-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:37:28.112466"
+    },
+    {
+        "end_date": "2024-04-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:37:46.587740"
+    },
+    {
+        "end_date": "2024-04-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:38:05.130688"
+    },
+    {
+        "end_date": "2024-04-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:38:23.804657"
+    },
+    {
+        "end_date": "2024-04-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:38:42.308115"
+    },
+    {
+        "end_date": "2024-04-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:39:02.069092"
+    },
+    {
+        "end_date": "2024-04-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:39:20.685453"
+    },
+    {
+        "end_date": "2024-04-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:39:39.293037"
+    },
+    {
+        "end_date": "2024-04-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:39:57.938839"
+    },
+    {
+        "end_date": "2024-04-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:40:16.716752"
+    },
+    {
+        "end_date": "2024-04-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:40:35.115565"
+    },
+    {
+        "end_date": "2024-04-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:40:53.704795"
+    },
+    {
+        "end_date": "2024-04-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:41:12.119442"
+    },
+    {
+        "end_date": "2024-04-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:41:30.685131"
+    },
+    {
+        "end_date": "2024-04-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:41:49.442246"
+    },
+    {
+        "end_date": "2024-04-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:42:07.900082"
+    },
+    {
+        "end_date": "2024-04-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:42:26.241913"
+    },
+    {
+        "end_date": "2024-04-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:42:44.813142"
+    },
+    {
+        "end_date": "2024-04-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:43:03.114987"
+    },
+    {
+        "end_date": "2024-04-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:43:21.690384"
+    },
+    {
+        "end_date": "2024-04-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:43:39.994394"
+    },
+    {
+        "end_date": "2024-04-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:43:58.507187"
+    },
+    {
+        "end_date": "2024-05-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:44:16.942326"
+    },
+    {
+        "end_date": "2024-05-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:44:35.477709"
+    },
+    {
+        "end_date": "2024-05-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:44:53.793428"
+    },
+    {
+        "end_date": "2024-05-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:45:13.235040"
+    },
+    {
+        "end_date": "2024-05-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:45:32.022526"
+    },
+    {
+        "end_date": "2024-05-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:45:51.231642"
+    },
+    {
+        "end_date": "2024-05-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:46:09.786282"
+    },
+    {
+        "end_date": "2024-05-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:46:28.820203"
+    },
+    {
+        "end_date": "2024-05-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:46:47.336230"
+    },
+    {
+        "end_date": "2024-05-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:47:07.078422"
+    },
+    {
+        "end_date": "2024-05-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:47:28.830204"
+    },
+    {
+        "end_date": "2024-05-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:47:49.751242"
+    },
+    {
+        "end_date": "2024-05-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:48:10.410401"
+    },
+    {
+        "end_date": "2024-05-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:48:38.503806"
+    },
+    {
+        "end_date": "2024-05-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:48:57.196680"
+    },
+    {
+        "end_date": "2024-05-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:49:17.205701"
+    },
+    {
+        "end_date": "2024-05-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:49:35.727534"
+    },
+    {
+        "end_date": "2024-05-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:49:54.226694"
+    },
+    {
+        "end_date": "2024-05-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:50:12.860912"
+    },
+    {
+        "end_date": "2024-05-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:50:31.736854"
+    },
+    {
+        "end_date": "2024-05-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:50:50.503251"
+    },
+    {
+        "end_date": "2024-05-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:51:10.355873"
+    },
+    {
+        "end_date": "2024-05-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:51:30.538066"
+    },
+    {
+        "end_date": "2024-05-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:51:51.384470"
+    },
+    {
+        "end_date": "2024-05-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:52:09.938677"
+    },
+    {
+        "end_date": "2024-05-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:52:28.533751"
+    },
+    {
+        "end_date": "2024-05-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:52:47.615781"
+    },
+    {
+        "end_date": "2024-05-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:53:06.347187"
+    },
+    {
+        "end_date": "2024-05-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:53:24.961540"
+    },
+    {
+        "end_date": "2024-05-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:53:43.933740"
+    },
+    {
+        "end_date": "2024-05-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:54:02.971791"
+    },
+    {
+        "end_date": "2024-06-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:54:21.676012"
+    },
+    {
+        "end_date": "2024-06-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:54:40.162323"
+    },
+    {
+        "end_date": "2024-06-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:54:58.881910"
+    },
+    {
+        "end_date": "2024-06-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:55:17.187425"
+    },
+    {
+        "end_date": "2024-06-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:55:35.650572"
+    },
+    {
+        "end_date": "2024-06-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:55:54.375452"
+    },
+    {
+        "end_date": "2024-06-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:56:13.424596"
+    },
+    {
+        "end_date": "2024-06-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:56:32.218146"
+    },
+    {
+        "end_date": "2024-06-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:56:51.008371"
+    },
+    {
+        "end_date": "2024-06-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:57:09.809192"
+    },
+    {
+        "end_date": "2024-06-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:57:28.511423"
+    },
+    {
+        "end_date": "2024-06-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:57:47.531944"
+    },
+    {
+        "end_date": "2024-06-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:58:06.309524"
+    },
+    {
+        "end_date": "2024-06-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:58:24.871518"
+    },
+    {
+        "end_date": "2024-06-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:58:43.402707"
+    },
+    {
+        "end_date": "2024-06-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:59:02.060565"
+    },
+    {
+        "end_date": "2024-06-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:59:20.765915"
+    },
+    {
+        "end_date": "2024-06-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:59:39.637300"
+    },
+    {
+        "end_date": "2024-06-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T10:59:58.175495"
+    },
+    {
+        "end_date": "2024-06-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:00:16.662579"
+    },
+    {
+        "end_date": "2024-06-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:00:35.181129"
+    },
+    {
+        "end_date": "2024-06-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:00:53.714494"
+    },
+    {
+        "end_date": "2024-06-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:01:12.778386"
+    },
+    {
+        "end_date": "2024-06-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:01:31.739483"
+    },
+    {
+        "end_date": "2024-06-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:01:50.425047"
+    },
+    {
+        "end_date": "2024-06-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:02:08.902901"
+    },
+    {
+        "end_date": "2024-06-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:02:27.609791"
+    },
+    {
+        "end_date": "2024-06-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:02:46.219488"
+    },
+    {
+        "end_date": "2024-06-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:03:04.856125"
+    },
+    {
+        "end_date": "2024-06-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:03:23.187242"
+    },
+    {
+        "end_date": "2024-07-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:03:41.859967"
+    },
+    {
+        "end_date": "2024-07-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:04:01.003720"
+    },
+    {
+        "end_date": "2024-07-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:04:19.881406"
+    },
+    {
+        "end_date": "2024-07-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:04:38.761553"
+    },
+    {
+        "end_date": "2024-07-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:04:57.450099"
+    },
+    {
+        "end_date": "2024-07-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:05:16.034730"
+    },
+    {
+        "end_date": "2024-07-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:05:34.709015"
+    },
+    {
+        "end_date": "2024-07-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:05:53.327822"
+    },
+    {
+        "end_date": "2024-07-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:06:12.080241"
+    },
+    {
+        "end_date": "2024-07-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:06:31.027334"
+    },
+    {
+        "end_date": "2024-07-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:06:49.578984"
+    },
+    {
+        "end_date": "2024-07-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:07:08.402340"
+    },
+    {
+        "end_date": "2024-07-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:07:27.131017"
+    },
+    {
+        "end_date": "2024-07-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:07:45.962021"
+    },
+    {
+        "end_date": "2024-07-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:08:04.511501"
+    },
+    {
+        "end_date": "2024-07-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:08:23.022604"
+    },
+    {
+        "end_date": "2024-07-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:08:42.040391"
+    },
+    {
+        "end_date": "2024-07-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:09:00.578054"
+    },
+    {
+        "end_date": "2024-07-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:09:19.234239"
+    },
+    {
+        "end_date": "2024-07-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:09:37.750504"
+    },
+    {
+        "end_date": "2024-07-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:09:56.526544"
+    },
+    {
+        "end_date": "2024-07-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:10:16.051677"
+    },
+    {
+        "end_date": "2024-07-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:10:34.524193"
+    },
+    {
+        "end_date": "2024-07-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:10:52.943849"
+    },
+    {
+        "end_date": "2024-07-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:11:11.495928"
+    },
+    {
+        "end_date": "2024-07-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:11:30.034835"
+    },
+    {
+        "end_date": "2024-07-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:11:48.612071"
+    },
+    {
+        "end_date": "2024-07-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:12:07.052369"
+    },
+    {
+        "end_date": "2024-07-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:12:25.626419"
+    },
+    {
+        "end_date": "2024-07-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:12:44.212268"
+    },
+    {
+        "end_date": "2024-07-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:13:02.900131"
+    },
+    {
+        "end_date": "2024-08-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:13:21.580318"
+    },
+    {
+        "end_date": "2024-08-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:13:40.241736"
+    },
+    {
+        "end_date": "2024-08-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:13:58.996143"
+    },
+    {
+        "end_date": "2024-08-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:14:17.818003"
+    },
+    {
+        "end_date": "2024-08-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:14:36.238082"
+    },
+    {
+        "end_date": "2024-08-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:14:55.071487"
+    },
+    {
+        "end_date": "2024-08-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:15:13.661540"
+    },
+    {
+        "end_date": "2024-08-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:15:32.425079"
+    },
+    {
+        "end_date": "2024-08-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:15:51.045012"
+    },
+    {
+        "end_date": "2024-08-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:16:09.796466"
+    },
+    {
+        "end_date": "2024-08-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:16:28.946725"
+    },
+    {
+        "end_date": "2024-08-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:16:48.180190"
+    },
+    {
+        "end_date": "2024-08-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:17:06.699998"
+    },
+    {
+        "end_date": "2024-08-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:17:25.357166"
+    },
+    {
+        "end_date": "2024-08-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:17:43.949179"
+    },
+    {
+        "end_date": "2024-08-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:18:02.896083"
+    },
+    {
+        "end_date": "2024-08-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:18:21.678024"
+    },
+    {
+        "end_date": "2024-08-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:18:40.236497"
+    },
+    {
+        "end_date": "2024-08-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:18:58.787394"
+    },
+    {
+        "end_date": "2024-08-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:19:17.335761"
+    },
+    {
+        "end_date": "2024-08-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:19:35.915966"
+    },
+    {
+        "end_date": "2024-08-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:19:55.085562"
+    },
+    {
+        "end_date": "2024-08-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:20:13.451387"
+    },
+    {
+        "end_date": "2024-08-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:20:32.068839"
+    },
+    {
+        "end_date": "2024-08-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:20:50.398648"
+    },
+    {
+        "end_date": "2024-08-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:21:09.005906"
+    },
+    {
+        "end_date": "2024-08-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:21:27.715560"
+    },
+    {
+        "end_date": "2024-08-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:21:47.558957"
+    },
+    {
+        "end_date": "2024-08-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:22:06.487457"
+    },
+    {
+        "end_date": "2024-08-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:22:25.150349"
+    },
+    {
+        "end_date": "2024-08-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:22:43.625146"
+    },
+    {
+        "end_date": "2024-09-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:23:02.158401"
+    },
+    {
+        "end_date": "2024-09-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:23:20.631478"
+    },
+    {
+        "end_date": "2024-09-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:23:39.210889"
+    },
+    {
+        "end_date": "2024-09-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:23:57.631229"
+    },
+    {
+        "end_date": "2024-09-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:24:16.301455"
+    },
+    {
+        "end_date": "2024-09-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:24:34.727444"
+    },
+    {
+        "end_date": "2024-09-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:24:53.146841"
+    },
+    {
+        "end_date": "2024-09-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:25:11.735345"
+    },
+    {
+        "end_date": "2024-09-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:25:30.400949"
+    },
+    {
+        "end_date": "2024-09-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:25:48.862991"
+    },
+    {
+        "end_date": "2024-09-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:26:07.800892"
+    },
+    {
+        "end_date": "2024-09-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:26:26.441809"
+    },
+    {
+        "end_date": "2024-09-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:26:45.137387"
+    },
+    {
+        "end_date": "2024-09-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:27:03.785860"
+    },
+    {
+        "end_date": "2024-09-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:27:22.230373"
+    },
+    {
+        "end_date": "2024-09-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:27:40.809974"
+    },
+    {
+        "end_date": "2024-09-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:27:59.277819"
+    },
+    {
+        "end_date": "2024-09-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:28:17.599903"
+    },
+    {
+        "end_date": "2024-09-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:28:36.150215"
+    },
+    {
+        "end_date": "2024-09-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:28:54.468728"
+    },
+    {
+        "end_date": "2024-09-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:29:12.852510"
+    },
+    {
+        "end_date": "2024-09-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:29:31.442645"
+    },
+    {
+        "end_date": "2024-09-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:29:49.978811"
+    },
+    {
+        "end_date": "2024-09-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:30:08.327734"
+    },
+    {
+        "end_date": "2024-09-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:30:27.170314"
+    },
+    {
+        "end_date": "2024-09-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:30:45.851385"
+    },
+    {
+        "end_date": "2024-09-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:31:04.454259"
+    },
+    {
+        "end_date": "2024-09-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:31:22.847621"
+    },
+    {
+        "end_date": "2024-09-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:31:41.597953"
+    },
+    {
+        "end_date": "2024-09-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:31:59.965893"
+    },
+    {
+        "end_date": "2024-10-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:32:18.562667"
+    },
+    {
+        "end_date": "2024-10-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:32:37.021365"
+    },
+    {
+        "end_date": "2024-10-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:32:55.539581"
+    },
+    {
+        "end_date": "2024-10-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:33:14.215750"
+    },
+    {
+        "end_date": "2024-10-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:33:33.070353"
+    },
+    {
+        "end_date": "2024-10-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:33:51.400930"
+    },
+    {
+        "end_date": "2024-10-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:34:09.795624"
+    },
+    {
+        "end_date": "2024-10-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:34:28.151765"
+    },
+    {
+        "end_date": "2024-10-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:34:46.552228"
+    },
+    {
+        "end_date": "2024-10-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:35:05.020088"
+    },
+    {
+        "end_date": "2024-10-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:35:23.488550"
+    },
+    {
+        "end_date": "2024-10-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:35:41.790003"
+    },
+    {
+        "end_date": "2024-10-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:36:00.197019"
+    },
+    {
+        "end_date": "2024-10-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:36:18.512108"
+    },
+    {
+        "end_date": "2024-10-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:36:36.955840"
+    },
+    {
+        "end_date": "2024-10-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:36:55.296808"
+    },
+    {
+        "end_date": "2024-10-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:37:13.710169"
+    },
+    {
+        "end_date": "2024-10-18",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:37:32.036722"
+    },
+    {
+        "end_date": "2024-10-19",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:37:50.670274"
+    },
+    {
+        "end_date": "2024-10-20",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:38:09.390785"
+    },
+    {
+        "end_date": "2024-10-21",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:38:27.807653"
+    },
+    {
+        "end_date": "2024-10-22",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:38:46.187972"
+    },
+    {
+        "end_date": "2024-10-23",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:39:04.691918"
+    },
+    {
+        "end_date": "2024-10-24",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:39:23.009819"
+    },
+    {
+        "end_date": "2024-10-25",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:39:41.474079"
+    },
+    {
+        "end_date": "2024-10-26",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:39:59.816969"
+    },
+    {
+        "end_date": "2024-10-27",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:40:18.389955"
+    },
+    {
+        "end_date": "2024-10-28",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:40:37.205683"
+    },
+    {
+        "end_date": "2024-10-29",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:40:55.825027"
+    },
+    {
+        "end_date": "2024-10-30",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:41:15.090722"
+    },
+    {
+        "end_date": "2024-10-31",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:41:34.320694"
+    },
+    {
+        "end_date": "2024-11-01",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:41:52.888443"
+    },
+    {
+        "end_date": "2024-11-02",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:42:11.678911"
+    },
+    {
+        "end_date": "2024-11-03",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:42:30.129921"
+    },
+    {
+        "end_date": "2024-11-04",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:42:48.583449"
+    },
+    {
+        "end_date": "2024-11-05",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:43:07.181672"
+    },
+    {
+        "end_date": "2024-11-06",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:43:25.830735"
+    },
+    {
+        "end_date": "2024-11-07",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:43:46.048231"
+    },
+    {
+        "end_date": "2024-11-08",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:44:06.012293"
+    },
+    {
+        "end_date": "2024-11-09",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:44:24.430079"
+    },
+    {
+        "end_date": "2024-11-10",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:44:43.283077"
+    },
+    {
+        "end_date": "2024-11-11",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:45:01.715617"
+    },
+    {
+        "end_date": "2024-11-12",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:45:20.180010"
+    },
+    {
+        "end_date": "2024-11-13",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:45:38.656643"
+    },
+    {
+        "end_date": "2024-11-14",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:45:57.063573"
+    },
+    {
+        "end_date": "2024-11-15",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:46:15.584783"
+    },
+    {
+        "end_date": "2024-11-16",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:46:33.988745"
+    },
+    {
+        "end_date": "2024-11-17",
+        "records_count": 24,
+        "timestamp": "2024-11-19T11:46:52.341217"
+    },
+    {
+        "end_date": "2024-11-18",
+        "records_count": 24,
+        "timestamp": "2024-11-20T17:49:34.542762"
+    },
+    {
+        "end_date": "2024-11-19",
+        "records_count": 24,
+        "timestamp": "2024-11-20T17:49:52.826506"
+    },
+    {
+        "end_date": "2024-11-20",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:37:38.943804"
+    },
+    {
+        "end_date": "2024-11-21",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:37:57.297730"
+    },
+    {
+        "end_date": "2024-11-22",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:38:16.197422"
+    },
+    {
+        "end_date": "2024-11-23",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:38:36.079551"
+    },
+    {
+        "end_date": "2024-11-24",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:38:54.675744"
+    },
+    {
+        "end_date": "2024-11-25",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:39:13.479535"
+    },
+    {
+        "end_date": "2024-11-26",
+        "records_count": 24,
+        "timestamp": "2024-11-27T04:39:32.285130"
+    },
+    {
+        "end_date": "2024-11-27",
+        "records_count": 24,
+        "timestamp": "2024-11-28T13:13:53.521341"
+    },
+    {
+        "end_date": "2024-11-28",
+        "records_count": 24,
+        "timestamp": "2024-11-29T10:19:49.580689"
+    },
+    {
+        "end_date": "2024-11-29",
+        "records_count": 24,
+        "timestamp": "2024-11-30T03:33:52.068553"
+    }
+]
