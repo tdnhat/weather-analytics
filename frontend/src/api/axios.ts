@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const apiInstance = axios.create({
-    baseURL: process.env.WEATHER_API_BASE_URL
+    baseURL: process.env.NEXT_PUBLIC_API_URL
 })
 
 apiInstance.interceptors.request.use(
