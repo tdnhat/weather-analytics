@@ -15,3 +15,18 @@ class SeasonalWeather(Base):
     avg_pressure = Column(Float)
     max_temp = Column(Float)
     min_temp = Column(Float)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "date": self.date.isoformat() if self.date else None,
+            "year": self.year,
+            "quarter": self.quarter,
+            "avg_temp": self.avg_temp,
+            "avg_humidity": self.avg_humidity,
+            "total_precip": self.total_precip,
+            "avg_wind": self.avg_wind,
+            "avg_pressure": self.avg_pressure,
+            "max_temp": self.max_temp,
+            "min_temp": self.min_temp
+        }

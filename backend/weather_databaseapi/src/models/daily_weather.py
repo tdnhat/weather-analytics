@@ -11,3 +11,13 @@ class DailyWeather(Base):
     total_precip = Column(Float)
     avg_wind = Column(Float)
     avg_pressure = Column(Float)
+
+    def to_dict(self):
+        return {
+            "date": self.date.isoformat(),
+            "avg_temp": self.avg_temp,
+            "avg_humidity": self.avg_humidity,
+            "total_precip": self.total_precip,
+            "avg_wind": self.avg_wind,
+            "avg_pressure": self.avg_pressure
+        }

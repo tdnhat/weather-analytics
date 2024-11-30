@@ -18,3 +18,22 @@ class CorrelationWeather(Base):
     wind_temp_corr = Column(Float)
     wind_humidity_corr = Column(Float)
     wind_pressure_corr = Column(Float)
+    
+    def to_dict(self):
+        """Converts the model instance to a dictionary."""
+        return {
+            "id": self.id,
+            "date": self.date.isoformat(),
+            "temp_humidity_corr": self.temp_humidity_corr,
+            "temp_pressure_corr": self.temp_pressure_corr,
+            "temp_wind_corr": self.temp_wind_corr,
+            "humidity_temp_corr": self.humidity_temp_corr,
+            "humidity_pressure_corr": self.humidity_pressure_corr,
+            "humidity_wind_corr": self.humidity_wind_corr,
+            "pressure_temp_corr": self.pressure_temp_corr,
+            "pressure_humidity_corr": self.pressure_humidity_corr,
+            "pressure_wind_corr": self.pressure_wind_corr,
+            "wind_temp_corr": self.wind_temp_corr,
+            "wind_humidity_corr": self.wind_humidity_corr,
+            "wind_pressure_corr": self.wind_pressure_corr,
+        }
