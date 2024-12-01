@@ -1,33 +1,72 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { WeatherRawQueries } from '@/entities/weatherRaw/queries'
 import { Pattern1Provider } from './context'
-import WeatherLineChart from '../WeatherLineChart'
-import WeatherDashboardControls from '../WeatherDashboardControls'
+import WeatherLineChart from '../WeatherLineChart/index'
 
-function Pattern1Dashboard() {
-    const [groupBy, setGroupBy] = useState<'day' | 'month' | 'week'>('day')
-    const [filter, setFilter] = useState<{start_date: string, end_date: string, group_by: 'day' | 'month' | 'week'}>({
-        start_date: '2024-10-01',
-        end_date: '2024-11-01',
-        group_by: 'day',
-    })
+interface IProps {
+    groupBy?: 'day' | 'month' | 'week';
+    filter?: {
+        start_date: string;
+        end_date: string;
+        group_by: 'day' | 'month' | 'week';
+    };
+}
 
-    const { data: weatherData } = useQuery(WeatherRawQueries.weatherDateRangeQuery(filter))
+const defaultStartDate = '2023-11-20';
+const defaultEndDate = new Date().toISOString().split('T')[0]; //yyyy-mm-dd
+
+function Pattern1Dashboard({ filter = { start_date: defaultStartDate, end_date: defaultEndDate, group_by: 'day'} }: IProps) {
+    const { data: dailyData } = useQuery(
+        WeatherRawQueries.weatherDateRangeQuery({
+            ...filter,
+            group_by: 'day'
+        })
+    )
+
+    const { data: weeklyData } = useQuery(
+        WeatherRawQueries.weatherDateRangeQuery({
+            ...filter,
+            group_by: 'week'
+        })
+    )
+
+    const { data: monthlyData } = useQuery(
+        WeatherRawQueries.weatherDateRangeQuery({
+            ...filter,
+            group_by: 'month'
+        })
+    )
 
     return (
-        <Pattern1Provider value={{ weatherData, groupBy, filter }}>
-            <WeatherDashboardControls />
-            <div className='flex flex-col gap-4'>
-                <WeatherLineChart dataType='avg_temp_c' title='Average Temperature C degree' color='red'/>
-                <WeatherLineChart dataType='avg_gust_kph' title='Average Gust KPH' color='blue' />
-                <WeatherLineChart dataType='avg_humidity' title='Average Humidity' color='green' />
-                <WeatherLineChart dataType='avg_precip_mm' title='Average Precipitation mm' color='yellow' />
-                <WeatherLineChart dataType='avg_wind_kph' title='Average Wind KPH' color='purple' />
-                <WeatherLineChart dataType='avg_windchill_c' title='Average Wind Chill C degree' color='orange' />
-                <WeatherLineChart dataType='avg_feelslike_c' title='Average Feels Like C degree' color='pink' />
-            </div>
-        </Pattern1Provider>
+        <div className='flex flex-col gap-8'>
+            <section>
+                <h2 className='text-xl font-bold mb-4'>Daily Weather Trends</h2>
+                <Pattern1Provider value={{ weatherData: dailyData, groupBy: 'day', filter }}>
+                    <div className='flex flex-col gap-4'>
+                        <WeatherLineChart dataType='avg_temp_c' title={`Daily Average Temperature (${dailyData?.start_date} - ${dailyData?.end_date})`} color='red'/>
+                    </div>
+                </Pattern1Provider>
+            </section>
+
+            <section>
+                <h2 className='text-xl font-bold mb-4'>Weekly Weather Trends</h2>
+                <Pattern1Provider value={{ weatherData: weeklyData, groupBy: 'week', filter }}>
+                    <div className='flex flex-col gap-4'>
+                        <WeatherLineChart dataType='avg_temp_c' title={`Weekly Average Temperature (Week 47/2023 - Week 47/2024)`} color='blue'/>
+                    </div>
+                </Pattern1Provider>
+            </section>
+
+            <section>
+                <h2 className='text-xl font-bold mb-4'>Monthly Weather Trends</h2>
+                <Pattern1Provider value={{ weatherData: monthlyData, groupBy: 'month', filter }}>
+                    <div className='flex flex-col gap-4'>
+                        <WeatherLineChart dataType='avg_temp_c' title={`Monthly Average Temperature (11/2023 - 11/2024)`} color='green'/>
+                    </div>
+                </Pattern1Provider>
+            </section>
+        </div>
     )
 }
 

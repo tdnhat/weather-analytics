@@ -1,62 +1,63 @@
-import React, { useMemo } from 'react'
-import { weatherRawTypesDto } from '@/api/weather/index'
-import Plot from 'react-plotly.js'
-import { usePattern1Context } from '../Pattern1Dashboard/context'
+import { useMemo } from "react";
+import { usePattern1Context } from "../Pattern1Dashboard/context";
+import Plot from "react-plotly.js";
 
-interface IProps { 
-    dataType: 
-    | 'avg_feelslike_c'
-    | 'avg_temp_c'
-    | 'avg_gust_kph'
-    | 'avg_humidity'
-    | 'avg_precip_mm'
-    | 'avg_wind_kph'
-    | 'avg_windchill_c',
+interface IProps {
+    dataType: 'avg_feelslike_c' | 'avg_temp_c' | 'avg_gust_kph' | 'avg_humidity' | 'avg_precip_mm' | 'avg_wind_kph' | 'avg_windchill_c',
     title?: string,
     color?: string
 }
 
 function WeatherLineChart({ dataType, title, color }: IProps) {
-    const { weatherData, groupBy } = usePattern1Context()
+    const { weatherData } = usePattern1Context();
 
     const { xList, yList } = useMemo(() => {
-        let xList: number[] = []
+        let xList: string[] = []
+        let yList: number[] = []
+
         if (weatherData && weatherData.data) {
-            if (groupBy === 'day') {
-                xList = weatherData.data
-                    .map(item => (item as { day: number }).day)
-            } else if (groupBy === 'month') {
-                xList = weatherData.data
-                    .map(item => (item as { month: number }).month)
-            } else if (groupBy === 'week') {
-                xList = weatherData.data
-                    .map(item => (item as { week: number }).week)
-            }
+            xList = weatherData.data.map(item => {
+                if ('day' in item) {
+                    return `${item.day}/${item.month}/${item.year}`
+                }
+                if ('week' in item) {
+                    return `Week ${item.week}/${item.year}`
+                }
+                return `${item.month}/${item.year}`
+            })
+            yList = weatherData.data.map(item => item[dataType])
         }
 
-        const yList = weatherData?.data.map(data => data[dataType])
-        
         return { xList, yList }
-    }, [weatherData, groupBy])
-
+    }, [weatherData, dataType])
 
     return (
         <Plot
             className='w-full'
             data={[
-            {
-                x: xList,
-                y: yList,
-                type: 'scatter',
-                mode: 'lines',
-                line: {color}
-            },
+                {
+                    x: xList,
+                    y: yList,
+                    type: 'scatter',
+                    mode: 'lines',
+                    line: { color }
+                },
             ]}
             layout={{
-                width: 840, height: 320, title: {text: title || 'Line Chart'},
+                autosize: true,
+                height: 320,
+                title: { text: title || 'Weather Data Chart' },
+                margin: { l: 50, r: 50, t: 50, b: 50 },
+                xaxis: {
+                    tickfont: {
+                        family: 'Arial, sans-serif',
+                    },
+                    tickangle: 45
+                }
             }}
+            useResizeHandler
         />
     )
 }
 
-export default WeatherLineChart
+export default WeatherLineChart;
