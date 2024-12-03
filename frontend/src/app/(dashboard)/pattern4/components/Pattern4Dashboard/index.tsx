@@ -6,7 +6,7 @@ import CorrelationChart from '../CorrelationChart'
 
 function Pattern4Dashboard() {
     const { data: correlationData, error, isLoading } = useQuery({
-        queryKey: ['correlation', 2023],
+        queryKey: ['correlation'],
         queryFn: () => WeatherRawService.getCorrelation({ params: { year: 2023 } })
     })
 

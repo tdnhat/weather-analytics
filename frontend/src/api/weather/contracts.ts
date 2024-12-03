@@ -64,3 +64,22 @@ export const CorrelationResponseSchema = z.object({
 export const CorrelationQueryParamsSchema = z.object({
     year: z.number()
 })
+
+export const DailyTrendsDataSchema = z.object({
+    date: z.string(),
+    avg_temp: z.number(),
+    avg_humidity: z.number(),
+    total_precip: z.number(),
+    avg_wind: z.number(),
+})
+
+export const DailyTrendsQueryParamsSchema = z.object({
+    start_date: z.string(),
+    end_date: z.string(),
+})
+
+export const DailyTrendsResponseSchema = z.object({
+    data: z.array(DailyTrendsDataSchema)
+})
+
+
