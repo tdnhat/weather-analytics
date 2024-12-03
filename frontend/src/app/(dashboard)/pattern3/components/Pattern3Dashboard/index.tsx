@@ -40,13 +40,13 @@ function Pattern3Dashboard({
     return (
         <div className='flex flex-col gap-8'>
             <section>
-                <h2 className='text-xl font-bold mb-4'>Seasonal Weather Analysis</h2>
+                <h2 className='text-xl font-bold mb-4'>Biểu đồ nhiệt độ theo quý</h2>
                 <Pattern3Provider value={{ seasonalData }}>
                     <div className='w-full'>
                         <SeasonalChart 
                             dataType='avg_temp'
-                            title='Temperature by Season'
-                            yAxisTitle='Temperature (°C)'
+                            title='Nhiệt độ trung bình'
+                            yAxisTitle='Nhiệt độ (°C)'
                         />
                     </div>
                 </Pattern3Provider>
