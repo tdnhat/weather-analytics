@@ -82,4 +82,21 @@ export const DailyTrendsResponseSchema = z.object({
     data: z.array(DailyTrendsDataSchema)
 })
 
+export const SeasonalDataDataSchema = z.object({
+    year: z.number().int(),
+    quarter: z.number().int().min(1).max(4),
+    avg_temp: z.number(),
+    avg_humidity: z.number(),
+})
+
+export const SeasonalDataQueryParamsSchema = z.object({
+    start_date: z.string(),
+    end_date: z.string(),
+    quarters: z.array(z.number().int().min(1).max(4))
+})
+
+export const SeasonalDataResponseSchema = z.object({
+    data: z.array(SeasonalDataDataSchema)
+})
+
 

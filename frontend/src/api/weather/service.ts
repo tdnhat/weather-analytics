@@ -5,7 +5,9 @@ import {
     CorrelationQueryParams,
     CorrelationResponse,
     DailyTrendsQueryParams,
-    DailyTrendsResponse
+    DailyTrendsResponse,
+    SeasonalDataQueryParams,
+    SeasonalDataResponse
 } from './types'
 
 export class WeatherRawService {
@@ -25,5 +27,11 @@ export class WeatherRawService {
         params: DailyTrendsQueryParams
     }) {
         return httpGet<DailyTrendsResponse>('/analysis/daily', config)
+    }
+
+    static getSeasonalData(config: {
+        params: SeasonalDataQueryParams
+    }) {
+        return httpGet<SeasonalDataResponse>('/analysis/seasonal', config)
     }
 }
