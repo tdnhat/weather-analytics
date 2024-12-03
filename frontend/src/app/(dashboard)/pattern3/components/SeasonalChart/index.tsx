@@ -12,24 +12,41 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
     const { seasonalData } = usePattern3Context();
 
     const plotData = useMemo(() => {
-        const quarterData: { [key: number]: { dates: string[], values: number[] } } = {};
+        const quarterlyData: { [key: string]: { dates: string[], values: number[], quarter: number } } = {};
         
         if (seasonalData?.data?.data && Array.isArray(seasonalData.data.data)) {
             seasonalData.data.data.forEach(item => {
-                if (!quarterData[item.quarter]) {
-                    quarterData[item.quarter] = { dates: [], values: [] };
+                const key = `${item.year}-Q${item.quarter}`;
+                if (!quarterlyData[key]) {
+                    quarterlyData[key] = { dates: [], values: [], quarter: item.quarter };
                 }
-                quarterData[item.quarter].dates.push(item.date);
-                quarterData[item.quarter].values.push(item[dataType]);
+                quarterlyData[key].dates.push(item.date);
+                quarterlyData[key].values.push(item[dataType]);
             });
         }
 
-        return Object.entries(quarterData).map(([quarter, data]) => ({
+        const quarterColors = {
+            1: '#7bc86c',  // soft green
+            2: '#f5d76e',  // soft yellow
+            3: '#ffb366',  // soft orange
+            4: '#85c1e9'   // soft blue
+        };
+
+        return Object.entries(quarterlyData).map(([key, data]) => ({
             x: data.dates,
             y: data.values,
             type: 'scatter',
-            mode: 'lines',
-            name: `Q${quarter}`,
+            mode: 'lines+markers',
+            name: key,
+            line: {
+                shape: 'spline',
+                width: 2,
+                color: quarterColors[data.quarter]
+            },
+            marker: {
+                size: 6,
+                opacity: 0.7
+            }
         }));
     }, [seasonalData, dataType]);
 
@@ -37,18 +54,10 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
         return <div>No data available</div>;
     }
 
-    const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96c93d'];
-
     return (
         <Plot
             className='w-full'
-            data={plotData.map((trace, index) => ({
-                ...trace,
-                line: { 
-                    color: colors[index % colors.length],
-                    width: 1.5
-                }
-            }))}
+            data={plotData}
             layout={{
                 autosize: true,
                 height: 400,
@@ -66,14 +75,19 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
                     tickfont: { size: 11 },
                     showgrid: true,
                     gridcolor: '#f5f6fa',
-                    zeroline: false
+                    zeroline: false,
+                    showspikes: true,
+                    spikemode: 'across',
+                    spikethickness: 1
                 },
                 yaxis: {
                     title: yAxisTitle,
                     tickfont: { size: 11 },
                     showgrid: true,
                     gridcolor: '#f5f6fa',
-                    zeroline: false
+                    zeroline: false,
+                    showspikes: true,
+                    spikethickness: 1
                 },
                 plot_bgcolor: 'white',
                 paper_bgcolor: 'white',
@@ -81,14 +95,19 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
                 legend: {
                     x: 1,
                     xanchor: 'right',
-                    y: 1
+                    y: 1,
+                    bgcolor: 'rgba(255, 255, 255, 0.8)',
+                    bordercolor: '#f5f6fa',
+                    borderwidth: 1
                 },
-                hovermode: 'x unified'
+                hovermode: 'x unified',
+                modebar: {
+                    remove: ['autoScale2d', 'lasso2d', 'pan2d', 'select2d', 'toggleSpikelines', 'hoverClosestCartesian'],
+                    add: ['hoverclosest']
+                },
             }}
-            useResizeHandler
-            style={{ width: '100%' }}
             config={{
-                displayModeBar: false
+                responsive: true
             }}
         />
     );
