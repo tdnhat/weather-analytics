@@ -40,7 +40,7 @@ function WeatherLineChart({ dataType, title, color }: IProps) {
                     y: yList,
                     type: 'scatter',
                     mode: 'lines',
-                    line: { color }
+                    line: { color },
                 },
             ]}
             layout={{
@@ -53,7 +53,8 @@ function WeatherLineChart({ dataType, title, color }: IProps) {
                         family: 'Arial, sans-serif',
                     },
                     tickangle: 45
-                }
+                },
+                hovermode: 'x unified'
             }}
             useResizeHandler
         />
