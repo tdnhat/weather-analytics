@@ -5,11 +5,10 @@ import Plot from "react-plotly.js";
 interface IProps {
     dataType: 'avg_temp' | 'avg_humidity' | 'total_precip' | 'avg_wind' | 'avg_pressure',
     title: string,
-    color: string,
     yAxisTitle: string
 }
 
-function WeatherTrendChart({ dataType, title, color, yAxisTitle }: IProps) {
+function WeatherTrendChart({ dataType, title, yAxisTitle }: IProps) {
     const { correlationData } = usePattern2Context();
 
     const { dates, values, smoothedValues } = useMemo(() => {

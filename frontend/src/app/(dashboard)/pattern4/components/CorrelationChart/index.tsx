@@ -6,13 +6,13 @@ const CorrelationChart = () => {
   const { correlationData } = usePattern4Context();
 
   if (!correlationData) {
-    return <div>No correlation data available</div>;
+    return <div>Không có dữ liệu tương quan</div>;
   }
 
   // Access the first data point
   const dataPoint = correlationData[0];
 
-  const labels = ["Temp", "Humidity", "Pressure", "Wind"];
+  const labels = ["Nhiệt độ", "Độ ẩm", "Áp suất", "Gió"];
   const matrix = [
     [1, dataPoint.temp_humidity_corr, dataPoint.temp_pressure_corr, dataPoint.temp_wind_corr],
     [dataPoint.humidity_temp_corr, 1, dataPoint.humidity_pressure_corr, dataPoint.humidity_wind_corr],
@@ -29,10 +29,16 @@ const CorrelationChart = () => {
           y: labels,
           type: "heatmap",
           colorscale: "Viridis",
+          text: matrix.map(row => 
+            row.map(value => value.toFixed(2))
+          ),
+          texttemplate: "%{text}",
+          textfont: { color: "white" },
+          hoverongaps: false,
         },
       ]}
       layout={{
-        title: "Correlation Heatmap",
+        title: "Biểu đồ ma trận tương quan",
         xaxis: { side: "bottom" },
         margin: { l: 50, r: 50, t: 50, b: 50 },
       }}

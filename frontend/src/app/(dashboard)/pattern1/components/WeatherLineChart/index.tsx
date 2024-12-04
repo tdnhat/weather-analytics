@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useRef, useEffect, useState } from "react";
 import { usePattern1Context } from "../Pattern1Dashboard/context";
 import Plot from "react-plotly.js";
 
@@ -10,6 +10,28 @@ interface IProps {
 
 function WeatherLineChart({ dataType, title, color }: IProps) {
     const { weatherData } = usePattern1Context();
+    const chartRef = useRef<HTMLDivElement>(null);
+    const [containerWidth, setContainerWidth] = useState(0);
+
+    useEffect(() => {
+        const updateWidth = () => {
+            if (chartRef.current) {
+                setContainerWidth(chartRef.current.clientWidth);
+            }
+        };
+
+        // Initial width
+        updateWidth();
+
+        // Create ResizeObserver
+        const resizeObserver = new ResizeObserver(updateWidth);
+        if (chartRef.current) {
+            resizeObserver.observe(chartRef.current);
+        }
+
+        // Cleanup
+        return () => resizeObserver.disconnect();
+    }, []);
 
     const { xList, yList } = useMemo(() => {
         let xList: string[] = []
@@ -32,32 +54,38 @@ function WeatherLineChart({ dataType, title, color }: IProps) {
     }, [weatherData, dataType])
 
     return (
-        <Plot
-            className='w-full'
-            data={[
-                {
-                    x: xList,
-                    y: yList,
-                    type: 'scatter',
-                    mode: 'lines',
-                    line: { color },
-                },
-            ]}
-            layout={{
-                autosize: true,
-                height: 320,
-                title: { text: title || 'Weather Data Chart' },
-                margin: { l: 50, r: 50, t: 50, b: 50 },
-                xaxis: {
-                    tickfont: {
-                        family: 'Arial, sans-serif',
+        <div ref={chartRef} className="w-full">
+            <Plot
+                className="w-full"
+                data={[
+                    {
+                        x: xList,
+                        y: yList,
+                        type: 'scatter',
+                        mode: 'lines',
+                        line: { color },
                     },
-                    tickangle: 45
-                },
-                hovermode: 'x unified'
-            }}
-            useResizeHandler
-        />
+                ]}
+                layout={{
+                    width: containerWidth,
+                    height: 320,
+                    title: { text: title || 'Weather Data Chart' },
+                    margin: { l: 50, r: 50, t: 50, b: 50 },
+                    xaxis: {
+                        tickfont: {
+                            family: 'Arial, sans-serif',
+                        },
+                        tickangle: 45
+                    },
+                    hovermode: 'x unified',
+                    showlegend: true
+                }}
+                config={{
+                    responsive: true,
+                    displayModeBar: true,
+                }}
+            />
+        </div>
     )
 }
 

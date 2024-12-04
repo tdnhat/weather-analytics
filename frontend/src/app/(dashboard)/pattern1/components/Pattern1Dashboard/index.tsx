@@ -43,7 +43,7 @@ function Pattern1Dashboard({ filter = { start_date: defaultStartDate, end_date: 
             <section>
                 <h2 className='text-xl font-bold mb-4'>Daily Weather Trends</h2>
                 <Pattern1Provider value={{ weatherData: dailyData, groupBy: 'day', filter }}>
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-4 p-4 rounded-lg bg-white'>
                         <WeatherLineChart dataType='avg_temp_c' title={`Daily Average Temperature (${dailyData?.start_date} - ${dailyData?.end_date})`} color='red'/>
                     </div>
                 </Pattern1Provider>
@@ -52,7 +52,7 @@ function Pattern1Dashboard({ filter = { start_date: defaultStartDate, end_date: 
             <section>
                 <h2 className='text-xl font-bold mb-4'>Weekly Weather Trends</h2>
                 <Pattern1Provider value={{ weatherData: weeklyData, groupBy: 'week', filter }}>
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-4 p-4 rounded-lg bg-white'>
                         <WeatherLineChart dataType='avg_temp_c' title={`Weekly Average Temperature (Week 47/2023 - Week 47/2024)`} color='blue'/>
                     </div>
                 </Pattern1Provider>
@@ -61,7 +61,7 @@ function Pattern1Dashboard({ filter = { start_date: defaultStartDate, end_date: 
             <section>
                 <h2 className='text-xl font-bold mb-4'>Monthly Weather Trends</h2>
                 <Pattern1Provider value={{ weatherData: monthlyData, groupBy: 'month', filter }}>
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-4 p-4 rounded-lg bg-white'>
                         <WeatherLineChart dataType='avg_temp_c' title={`Monthly Average Temperature (11/2023 - 11/2024)`} color='green'/>
                     </div>
                 </Pattern1Provider>

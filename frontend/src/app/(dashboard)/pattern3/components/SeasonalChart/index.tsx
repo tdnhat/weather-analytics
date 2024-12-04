@@ -20,8 +20,8 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
                 if (!quarterlyData[key]) {
                     quarterlyData[key] = { dates: [], values: [], quarter: item.quarter };
                 }
-                quarterlyData[key].dates.push(item.date);
-                quarterlyData[key].values.push(item[dataType]);
+                quarterlyData[key].dates.push(item.date || '');
+                quarterlyData[key].values.push(item[dataType] || 0);
             });
         }
 
@@ -41,7 +41,7 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
             line: {
                 shape: 'spline',
                 width: 2,
-                color: quarterColors[data.quarter]
+                color: quarterColors[data.quarter as keyof typeof quarterColors]
             },
             marker: {
                 size: 6,
@@ -57,7 +57,7 @@ function SeasonalChart({ dataType, title, yAxisTitle }: IProps) {
     return (
         <Plot
             className='w-full'
-            data={plotData}
+            data={plotData as any}
             layout={{
                 autosize: true,
                 height: 400,

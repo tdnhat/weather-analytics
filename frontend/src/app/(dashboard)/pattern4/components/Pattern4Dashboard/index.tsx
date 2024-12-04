@@ -12,13 +12,10 @@ function Pattern4Dashboard() {
 
     if (isLoading) return <div>Loading...</div>
     if (error) return <div>Error loading data</div>
-
-    console.log("Correlation Data:", correlationData);
-
     return (
         <div className='flex flex-col gap-8'>
             <section>
-                <h2 className='text-xl font-bold mb-4'>Weather Correlations</h2>
+                <h2 className='text-xl font-bold mb-4'>Biểu đồ ma trận tương quan</h2>
                 <Pattern4Provider value={{ correlationData: correlationData?.data?.data ?? [] }}>
                     <div className='flex flex-col gap-4'>
                         <CorrelationChart />

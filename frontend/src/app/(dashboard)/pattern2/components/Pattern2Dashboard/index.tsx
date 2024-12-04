@@ -31,14 +31,13 @@ function Pattern2Dashboard({ filter = { start_date: defaultStartDate, end_date: 
     return (
         <div className='flex flex-col gap-8'>
             <section>
-                <h2 className='text-xl font-bold mb-4'>Weather Trends Analysis</h2>
+                <h2 className='text-xl font-bold mb-4'>Biểu đồ phân tích trend của nhiệt độ</h2>
                 <Pattern2Provider value={{ correlationData: dailyData }}>
                     <div className='w-full'>
                         <WeatherTrendChart 
                             dataType='avg_temp'
-                            title='Temperature Trend'
-                            color='red'
-                            yAxisTitle='Temperature (°C)'
+                            title='Trend của nhiệt độ'
+                            yAxisTitle='Nhiệt độ (°C)'
                         />
                     </div>
                 </Pattern2Provider>

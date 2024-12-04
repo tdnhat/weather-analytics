@@ -20,7 +20,7 @@ function Pattern3Dashboard({
     filter = { 
         start_date: defaultStartDate, 
         end_date: defaultEndDate,
-        quarters: defaultQuarters 
+        quarters: defaultQuarters
     } 
 }: IProps) {
     const { data: seasonalData, error, isLoading } = useQuery({
@@ -29,7 +29,7 @@ function Pattern3Dashboard({
             params: { 
                 start_date: filter.start_date,
                 end_date: filter.end_date,
-                quarters: filter.quarters
+                quarters: filter.quarters || []
             } 
         })
     })
