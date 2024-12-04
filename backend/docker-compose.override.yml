@@ -73,31 +73,9 @@
 #       debezium:
 #         condition: service_healthy
 #     restart: on-failure
-#     command: >
-#       -X POST http://debezium:8083/connectors -H "Content-Type: application/json" -d '{
-#         "name": "weather-mysql-connector",
-#         "config": {
-#           "connector.class": "io.debezium.connector.mysql.MySqlConnector",
-#           "database.hostname": "'${DB_HOST}'",
-#           "database.port": "'${DB_PORT}'",
-#           "database.user": "'${DB_USER}'",
-#           "database.password": "'${DB_PASSWORD}'",
-#           "database.server.name": "weather-mysql",
-#           "database.server.id": "1",
-#           "database.include.list": "'${DB_NAME}'",
-
-#           "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
-#           "schema.history.internal.kafka.topic": "schema-changes.weather",
-          
-#           "include.schema.changes": "true",
-#           "topic.prefix": "weather-mysql",
-#           "database.history.store.only.captured.tables.ddl": "true",
-#           "snapshot.mode": "initial",
-
-#           "time.precision.mode": "connect",
-#           "datetime.handling.mode": "string"
-#         }
-#       }'
+#     volumes:
+#       - ./register-connector.sh:/register-connector.sh
+#     command: ["/bin/sh", "/register-connector.sh"]
 
 #   kafka-ui:
 #     container_name: kafka-ui

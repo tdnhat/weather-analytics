@@ -3,9 +3,9 @@ import logging
 from kafka import KafkaConsumer
 from kafka.consumer.subscription_state import ConsumerRebalanceListener
 from json import loads
-from src.config.logging import logger
+from app.config.logging import logger
 from datetime import datetime
-from ...models.analysis import HourlyWeatherData
+from ...models.prediction import HourlyWeatherData
 
 # Set log level for kafka
 logging.getLogger('kafka').setLevel(logging.WARNING)

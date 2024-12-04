@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+requests
+pandas
+numpy
+pydantic
+pydantic-settings
+aiohttp
+celery
+httpx
+apscheduler
+kafka-python
+redis[hiredis]

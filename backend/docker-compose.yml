@@ -17,7 +17,7 @@ services:
 
   weather.databaseapi:
     container_name: weather.databaseapi
-    image: nhathuy16092003/weatherdatabaseapi:latest
+    # image: nhathuy16092003/weatherdatabaseapi:latest
     build:
       context: ./weather_databaseapi
       dockerfile: Dockerfile
@@ -71,6 +71,6 @@ services:
 #   zookeeper_log:
 #   kafka_data:
 
-networks:
-  app-network:
-    driver: bridge
+# networks:
+#   app-network:
+#     driver: bridge
