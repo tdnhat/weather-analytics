@@ -76,7 +76,7 @@ function SpiderChart({ data }: IProps) {
                 ]}
                 layout={{
                     width: containerWidth,
-                    height: 500, // Increased height
+                    height: 400, // Increased height
                     polar: {
                         radialaxis: {
                             visible: true,
@@ -104,10 +104,6 @@ function SpiderChart({ data }: IProps) {
                         yanchor: 'middle',
                         orientation: 'v',
                         font: { color: '#0e7490', size: 14 }
-                    },
-                    title: {
-                        text: `Phân bố theo mùa`,
-                        font: { size: 16, color: '#0e7490' },
                     },
                     margin: { t: 50, b: 50, l: 50, r: 100 }, // Increased right margin for legend
                     paper_bgcolor: 'white',

@@ -16,7 +16,7 @@ function ClusteringDashboard() {
         <div className='grid grid-cols-10 gap-6'>
             <div className='col-span-10 lg:col-span-5'>
                 <h2 className='text-xl font-bold mb-4 text-white'>Phân bố theo mùa</h2>
-                <div className='bg-white rounded-lg p-6 h-[600px] relative'>
+                <div className='bg-white rounded-lg p-6 h-[500px] relative flex items-center justify-center'>
                     {isLoading && (
                         <div className='absolute inset-0 flex items-center justify-center bg-white bg-opacity-75'>
                             <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-sky-500'></div>
@@ -32,14 +32,16 @@ function ClusteringDashboard() {
                     )}
 
                     {!isLoading && !isError && spiderData && (
-                        <SpiderChart data={spiderData.data} />
+                        <div className="w-full">
+                            <SpiderChart data={spiderData.data} />
+                        </div>
                     )}
                 </div>
             </div>
 
             <div className='col-span-10 lg:col-span-5'>
                 <h2 className='text-xl font-bold mb-4 text-white'>Xác suất phân mùa</h2>
-                <div className='bg-white rounded-lg p-6 h-[600px]'>
+                <div className='bg-white rounded-lg p-6 h-[500px]'>
                     <SeasonProbability />
                 </div>
             </div>
