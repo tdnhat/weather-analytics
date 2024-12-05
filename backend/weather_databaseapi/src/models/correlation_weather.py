@@ -5,7 +5,7 @@ class CorrelationWeather(Base):
     __tablename__ = "correlation_weathers"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    date = Column(DateTime)
+    year = Column(Integer)
     temp_humidity_corr = Column(Float)
     temp_pressure_corr = Column(Float)
     temp_wind_corr = Column(Float)
@@ -23,7 +23,7 @@ class CorrelationWeather(Base):
         """Converts the model instance to a dictionary."""
         return {
             "id": self.id,
-            "date": self.date.isoformat(),
+            "year": self.year,
             "temp_humidity_corr": self.temp_humidity_corr,
             "temp_pressure_corr": self.temp_pressure_corr,
             "temp_wind_corr": self.temp_wind_corr,

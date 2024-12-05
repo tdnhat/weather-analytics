@@ -2,7 +2,6 @@ import datetime
 import json
 from datetime import datetime
 import logging
-from fastapi import APIRouter, Query, status
 from fastapi.responses import JSONResponse
 from sqlalchemy import extract
 from src.context.database import SessionLocal
@@ -77,6 +76,9 @@ async def create_seasonal_weather(seasonal_weather_dto: CreateSeasonalWeatherDto
 async def create_correlation_weather(correlation_data_weather_dto: CreateCorrelationWeatherDto):
     try:
         db = SessionLocal()
+
+        # Xóa những năm đã tồn tại trước đó
+        db.query(CorrelationWeather).filter(CorrelationWeather.year == correlation_data_weather_dto.year).delete()
         
         correlation_data = CorrelationWeather(**correlation_data_weather_dto.model_dump())
         db.add(correlation_data)
@@ -181,7 +183,7 @@ async def get_correlation_weather(
 
         # Filter records by year
         result = db.query(CorrelationWeather)\
-                    .filter(extract('year', CorrelationWeather.date) == year)\
+                    .filter(CorrelationWeather.year == year)\
                     .all()
         
         # Serialize the result
@@ -202,4 +204,3 @@ async def get_correlation_weather(
         )
     finally:
         db.close()
-    return

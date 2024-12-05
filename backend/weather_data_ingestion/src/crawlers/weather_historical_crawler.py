@@ -125,7 +125,7 @@ class HistoricalWeatherCrawler:
             self.logger.info(f"Starting data collection from {start_date} to {end_date.strftime('%Y-%m-%d')}")
             
             async with aiohttp.ClientSession() as session:
-                while current_date.date() < end_date.date():
+                while current_date.date() <= end_date.date():
                     try:
                         date_str = current_date.strftime('%Y-%m-%d')
                         self.logger.info(f"Processing date: {date_str}")
