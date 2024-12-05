@@ -12,3 +12,4 @@ httpx
 apscheduler
 kafka-python
 redis[hiredis]
+scikit-learn

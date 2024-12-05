@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     CELERY_WORKER: bool = os.getenv("CELERY_WORKER", "false").lower() == "true"
 
     # Schedule intervals (seconds)
-    PREDICTION_TRAINING_SCHEDULE: float = 300.0  # 30 giây
+    PREDICTION_TRAINING_SCHEDULE: float = 30 * 24 * 60 * 60  # 1 thang
 
     # Schedule enabled flags
     PREDICTION_TRAINING_ENABLED: bool = True

@@ -6,7 +6,7 @@ from redis import Redis
 from celery.schedules import crontab
 from ..config.settings import settings
 from ..config.logging import logger
-from celery.signals import worker_ready
+from celery.signals import worker_ready, worker_shutdown
 from ..schedulers.prediction_schedulers import WeatherPredictionScheduler
 
 # Initialize Redis client
@@ -28,14 +28,20 @@ celery_app = Celery('weather_prediction',
 
 scheduler = WeatherPredictionScheduler(is_worker=settings.CELERY_WORKER)
 
-@celery_app.task
+@worker_shutdown.connect
+def cleanup(sender, **kwargs):
+    if scheduler.consumers:
+        for consumer in scheduler.consumers.values():
+            consumer.close()
+
+@celery_app.task(name="app.tasks.prediction_tasks.process_training_prediction_model")
 def process_training_prediction_model():
     logger.info("Bắt đầu task training model")
     loop = None
     try:
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
-        result = loop.run_until_complete(scheduler.process_seasonal_clustering())
+        result = loop.run_until_complete(scheduler.process_training_model())
         return {"status": "success", "data": result}
     except Exception as e:
         logger.error(f"Lỗi trong task training model: {str(e)}")
@@ -54,10 +60,12 @@ def at_start(sender, **kwargs):
 # Cấu hình schedule cho các task
 beat_schedule = {}
 
-if settings.SEASONAL_CLUSTERING_ENABLED:
+if settings.PREDICTION_TRAINING_ENABLED:
     beat_schedule['prediction_training'] = {
-        'task': 'app.tasks.analysis_tasks.process_training_prediction_model',
-        'schedule': settings.PREDICTION_TRAINING_SCHEDULE
+        'task': 'app.tasks.prediction_tasks.process_training_prediction_model',
+        'schedule': settings.PREDICTION_TRAINING_SCHEDULE,
+        'options': {'queue': 'prediction_tasks'}
     }
 
 celery_app.conf.beat_schedule = beat_schedule
+celery_app.conf.task_routes = {'app.tasks.prediction_tasks.*': {'queue': 'prediction_tasks'}}

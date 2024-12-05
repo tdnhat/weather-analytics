@@ -2,6 +2,7 @@ import traceback
 import numpy as np
 import pandas as pd
 from ..models.clustering import (
+    CalculateSeasonProbabilityRequest,
     HourlyWeatherData, 
     Centroids,
     SeasonQuantityData,
@@ -182,3 +183,19 @@ class ClusteringWeatherService:
             logger.error(f"Lỗi khi phân cụm hàng ngày: {str(e)}")
             logger.error(f"Chi tiết lỗi: {traceback.format_exc()}")
             raise
+
+
+    def _calculate_season_probability(self, centroids: Centroids, temperature: float):
+        # Tính khoảng cách của nhiệt độ với các centroid tương ứng
+        distances = {
+            "spring": abs(temperature - centroids.spring_centroid),
+            "summer": abs(temperature - centroids.summer_centroid),
+            "autumn": abs(temperature - centroids.autumn_centroid),
+            "winter": abs(temperature - centroids.winter_centroid),
+        }
+
+        # Tính phần trăm
+        total_distance = sum(distances.values())
+        percentages = {key: round((1 - dist / total_distance) * 100, 2) for key, dist in distances.items()}
+
+        return percentages

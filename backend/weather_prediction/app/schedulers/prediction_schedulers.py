@@ -1,7 +1,7 @@
 from typing import Optional
 from ..config.logging import logger
 from ..config.settings import settings
-from app.services.prediction_service import PredictionWeatherService
+from app.services.prediction_service import WeatherPredictionService
 from app.services.consumers.prediction_consumer import PredictionWeatherConsumer
 
 class WeatherPredictionScheduler:
@@ -19,26 +19,25 @@ class WeatherPredictionScheduler:
             self.consumers = {}
             if is_worker:
                 self._initialize_consumers()
-            self.prediction_service = PredictionWeatherService()
+            self.prediction_service = WeatherPredictionService()
             self._initialized = True
     
     def _initialize_consumers(self):
         """Initialize consumers based on requirements"""
         self.consumers = {
-            'prediction': PredictionWeatherConsumer(settings.KAFKA_BOOTSTRAP_SERVERS),
+            'training_prediction_model': PredictionWeatherConsumer(settings.KAFKA_BOOTSTRAP_SERVERS),
         }
 
-    async def process_seasonal_clustering(self):
+    async def process_training_model(self):
         logger.info("Bắt đầu training dữ liệu")
         try:
-            if 'prediction' not in self.consumers:
-                self.consumers['prediction'] = PredictionWeatherConsumer(settings.KAFKA_BOOTSTRAP_SERVERS)
-            hourly_data = self.consumers['prediction'].get_data()
-            # if hourly_data:
-            #     result = await self.prediction_service.cluster_daily_data(hourly_data)
-            #     if result is not None:
-            #         await self.database_api.save_clustering_analysis(result)
-            #     logger.info("Hoàn thành phân cụm dữ liệu cho năm")
+            if 'training_prediction_model' not in self.consumers:
+                self.consumers['training_prediction_model'] = PredictionWeatherConsumer(settings.KAFKA_BOOTSTRAP_SERVERS)
+            hourly_data = self.consumers['training_prediction_model'].get_data()
+            if hourly_data:
+                result = await self.prediction_service.training_model(hourly_data)
+                if result is not None:
+                    logger.info(f"Training dữ liệu thành công {result}")
         except Exception as e:
             logger.error(f"Lỗi trong quá trình training: {str(e)}")
             raise

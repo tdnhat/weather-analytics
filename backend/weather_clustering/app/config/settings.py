@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     CELERY_WORKER: bool = os.getenv("CELERY_WORKER", "false").lower() == "true"
 
     # Schedule intervals (seconds)
-    SEASONAL_CLUSTERING_SCHEDULE: float = 300.0  # 30 giây
+    SEASONAL_CLUSTERING_SCHEDULE: float = 30 * 24 * 60 * 60   # 1 tháng
 
     # Schedule enabled flags
     SEASONAL_CLUSTERING_ENABLED: bool = True

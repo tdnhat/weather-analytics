@@ -6,7 +6,7 @@ from redis import Redis
 from celery.schedules import crontab
 from ..config.settings import settings
 from ..config.logging import logger
-from celery.signals import worker_ready
+from celery.signals import worker_ready, worker_shutdown
 from ..schedulers.clustering_scheduler import WeatherClusteringScheduler
 
 # Initialize Redis client
@@ -28,7 +28,13 @@ celery_app = Celery('weather_clustering',
 
 scheduler = WeatherClusteringScheduler(is_worker=settings.CELERY_WORKER)
 
-@celery_app.task
+@worker_shutdown.connect
+def cleanup(sender, **kwargs):
+    if scheduler.consumers:
+        for consumer in scheduler.consumers.values():
+            consumer.close()
+
+@celery_app.task(name="app.tasks.clustering_tasks.process_seasonal_clustering")
 def process_seasonal_clustering():
     logger.info("Bắt đầu task phân cụm theo mùa")
     loop = None
@@ -56,8 +62,12 @@ beat_schedule = {}
 
 if settings.SEASONAL_CLUSTERING_ENABLED:
     beat_schedule['seasonal_clustering'] = {
-        'task': 'app.tasks.analysis_tasks.process_seasonal_clustering',
-        'schedule': settings.SEASONAL_CLUSTERING_SCHEDULE
+        'task': 'app.tasks.clustering_tasks.process_seasonal_clustering',
+        'schedule': settings.SEASONAL_CLUSTERING_SCHEDULE,
+        'options': {'queue': 'clustering_tasks'}
     }
 
 celery_app.conf.beat_schedule = beat_schedule
+
+celery_app.conf.task_routes = {
+    'app.tasks.clustering_tasks.*': {'queue': 'clustering_tasks'}}

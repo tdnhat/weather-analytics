@@ -1,3 +1,4 @@
+import traceback
 from asyncio import gather
 from src.services.consumers.daily_consumer import DailyWeatherConsumer
 from src.services.consumers.seasonal_consumer import SeasonalWeatherConsumer

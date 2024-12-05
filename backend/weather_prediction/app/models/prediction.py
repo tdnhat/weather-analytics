@@ -1,8 +1,5 @@
-from ast import Dict
-from re import I
 from pydantic import BaseModel
-from typing import Optional, List
-from datetime import datetime
+from typing import List
 
 class HourlyWeatherData(BaseModel):
     Id: int
@@ -19,3 +16,12 @@ class HourlyWeatherData(BaseModel):
     DewpointC: float
     WindDegree: int
     WindDir: str
+
+class WeatherData(BaseModel):
+    time: str
+    temp: float
+    humidity: float
+    pressure: float
+
+class PredictionWeatherRequest(BaseModel):
+    weather_data: List[WeatherData]

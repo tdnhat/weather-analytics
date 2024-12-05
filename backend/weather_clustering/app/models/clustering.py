@@ -48,3 +48,7 @@ class SeasonQuantityData(BaseModel):
 class ClusteringResultData(BaseModel):
     centroids: Centroids
     quantity: List[SeasonQuantityData]
+
+class CalculateSeasonProbabilityRequest(BaseModel):
+    centroids: Centroids
+    temperature: float

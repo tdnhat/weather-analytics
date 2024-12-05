@@ -8,7 +8,7 @@ from kafka.structs import OffsetAndMetadata
 
 class PredictionWeatherConsumer(BaseWeatherConsumer):
     def __init__(self, bootstrap_servers: str):
-        super().__init__(bootstrap_servers, "prediction")
+        super().__init__(bootstrap_servers, "training_prediction")
         self._last_processed_offset = None
 
     def _store_offset(self, partition, offset):

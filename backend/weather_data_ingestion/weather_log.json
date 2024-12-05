@@ -1928,5 +1928,20 @@
         "end_date": "2024-12-02",
         "records_count": 24,
         "timestamp": "2024-12-03T07:52:05.225860"
+    },
+    {
+        "end_date": "2024-12-03",
+        "records_count": 24,
+        "timestamp": "2024-12-04T11:37:20.463898"
+    },
+    {
+        "end_date": "2024-12-04",
+        "records_count": 24,
+        "timestamp": "2024-12-05T05:21:50.850165"
+    },
+    {
+        "end_date": "2024-12-05",
+        "records_count": 24,
+        "timestamp": "2024-12-05T09:43:35.929872"
     }
 ]
