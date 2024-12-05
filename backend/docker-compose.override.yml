@@ -1,4 +1,4 @@
-services:
+# services:
   # zookeeper:
   #   container_name: zookeeper
   #   environment:
@@ -124,18 +124,18 @@ services:
   #     weather.databaseapi:
   #       condition: service_healthy
 
-  weather.prediction:
-    container_name: weather.prediction
-    environment:
-      - WORKER_ID=worker
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
-      - REDIS_URL=${REDIS_URL}
-      - CELERY_WORKER=true
-    ports:
-      - "8086:8000"
-    depends_on:
-      kafka:
-        condition: service_healthy
+  # weather.prediction:
+  #   container_name: weather.prediction
+  #   environment:
+  #     - WORKER_ID=worker
+  #     - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
+  #     - REDIS_URL=${REDIS_URL}
+  #     - CELERY_WORKER=true
+  #   ports:
+  #     - "8086:8000"
+  #   depends_on:
+  #     kafka:
+  #       condition: service_healthy
 
   # weather.prediction.worker:
   #   container_name: weather.prediction.worker
@@ -165,19 +165,19 @@ services:
   #     weather.databaseapi:
   #       condition: service_healthy
 
-  weather.clustering:
-    container_name: weather.clustering
-    environment:
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
-      - DATABASE_API_URL=http://weather.databaseapi:8080
-      - REDIS_URL=${REDIS_URL}
-    ports:
-      - "8087:8000"
-    depends_on:
-      kafka:
-        condition: service_healthy
-      weather.databaseapi:
-        condition: service_healthy        
+  # weather.clustering:
+  #   container_name: weather.clustering
+  #   environment:
+  #     - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
+  #     - DATABASE_API_URL=http://weather.databaseapi:8080
+  #     - REDIS_URL=${REDIS_URL}
+  #   ports:
+  #     - "8087:8000"
+  #   depends_on:
+  #     kafka:
+  #       condition: service_healthy
+  #     weather.databaseapi:
+  #       condition: service_healthy        
 
   # weather.clustering.worker:
   #   container_name: weather.clustering.worker
