@@ -69,7 +69,7 @@ function WeatherLineChart({ dataType, title, color }: IProps) {
                 layout={{
                     width: containerWidth,
                     height: 320,
-                    title: { text: title || 'Weather Data Chart' },
+                    title: { text: title || 'Weather Data Chart', font: { color: '#0e7490' } },
                     margin: { l: 50, r: 50, t: 50, b: 50 },
                     xaxis: {
                         tickfont: {
@@ -78,7 +78,9 @@ function WeatherLineChart({ dataType, title, color }: IProps) {
                         tickangle: 45
                     },
                     hovermode: 'x unified',
-                    showlegend: true
+                    showlegend: true,
+                    paper_bgcolor: 'white',  // Set background to white
+                    plot_bgcolor: 'white',   // Set plot area background to white
                 }}
                 config={{
                     responsive: true,

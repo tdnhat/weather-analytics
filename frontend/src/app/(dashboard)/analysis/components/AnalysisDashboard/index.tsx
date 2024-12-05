@@ -12,7 +12,7 @@ const defaultQuarters = [1, 2, 3, 4];
 function AnalysisDashboard() {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const { data: dailyTrends } = useQuery({
+    const { data: dailyTrends, isError: isDailyError } = useQuery({
         queryKey: ['daily-trends'],
         queryFn: () => WeatherRawService.getDailyTrends({ 
             params: { 
@@ -22,7 +22,7 @@ function AnalysisDashboard() {
         })
     })
 
-    const { data: seasonalData } = useQuery({
+    const { data: seasonalData, isError: isSeasonalError } = useQuery({
         queryKey: ['seasonal-data'],
         queryFn: () => WeatherRawService.getSeasonalData({ 
             params: { 
@@ -33,52 +33,54 @@ function AnalysisDashboard() {
         })
     })
 
-    const { data: correlationData } = useQuery({
+    const { data: correlationData, isError: isCorrelationError } = useQuery({
         queryKey: ['correlation'],
         queryFn: () => WeatherRawService.getCorrelation({ 
             params: { year: 2023 } 
         })
     })
 
-    if (!dailyTrends || !seasonalData || !correlationData) {
-        return <div>Loading...</div>
-    }
-
     return (
         <div ref={containerRef} className='grid grid-cols-10 gap-6'>
             {/* Seasonal Analysis */}
-            <div className='col-span-10'>
-                <h2 className='text-xl font-bold mb-4'>Biểu đồ nhiệt độ theo quý</h2>
-                <div className='bg-white rounded-lg p-4 shadow-sm'>
-                    <SeasonalChart 
-                        dataType='avg_temp'
-                        title='Biểu đồ nhiệt độ theo quý'
-                        yAxisTitle='Nhiệt độ (°C)'
-                        data={seasonalData?.data}
-                    />
+            {!isSeasonalError && seasonalData && (
+                <div className='col-span-10'>
+                    <h2 className='text-xl font-bold mb-4 text-white'>Biểu đồ nhiệt độ theo quý</h2>
+                    <div className='bg-white rounded-lg p-6'>
+                        <SeasonalChart 
+                            dataType='avg_temp'
+                            title='Biểu đồ nhiệt độ theo quý'
+                            yAxisTitle='Nhiệt độ (°C)'
+                            data={seasonalData?.data}
+                        />
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Moving Average Analysis */}
-            <div className='col-span-7'>
-                <h2 className='text-xl font-bold mb-4'>Biểu đồ trend của nhiệt độ</h2>
-                <div className='bg-white rounded-lg p-4 shadow-sm'>
-                    <WeatherTrendChart 
-                        dataType='avg_temp'
-                        title='Biểu đồ trend của nhiệt độ'
-                        yAxisTitle='Nhiệt độ (°C)'
-                        data={dailyTrends?.data}
-                    />
+            {!isDailyError && dailyTrends && (
+                <div className='col-span-7'>
+                    <h2 className='text-xl font-bold mb-4 text-white'>Biểu đồ trend của nhiệt độ</h2>
+                    <div className='bg-white rounded-lg p-6'>
+                        <WeatherTrendChart 
+                            dataType='avg_temp'
+                            title='Biểu đồ trend của nhiệt độ'
+                            yAxisTitle='Nhiệt độ (°C)'
+                            data={dailyTrends?.data}
+                        />
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Correlation Analysis */}
-            <div className='col-span-3'>
-                <h2 className='text-xl font-bold mb-4'>Biểu đồ tương quan nhiệt độ</h2>
-                <div className='bg-white rounded-lg p-4 shadow-sm'>
-                    <CorrelationChart data={correlationData?.data?.data} />
+            {!isCorrelationError && correlationData && (
+                <div className='col-span-3'>
+                    <h2 className='text-xl font-bold mb-4 text-white'>Biểu đồ tương quan nhiệt độ</h2>
+                    <div className='bg-white rounded-lg p-6'>
+                        <CorrelationChart data={correlationData?.data?.data} />
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     )
 }

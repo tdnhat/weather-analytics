@@ -63,7 +63,7 @@ function WeatherTrendChart({ dataType, title, yAxisTitle, data }: IProps) {
     }, [data, dataType]);
 
     return (
-        <div ref={chartRef} className="w-full">
+        <div ref={chartRef} className="w-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 border border-gray-100 rounded-lg p-4">
             <Plot
                 data={[
                     {
@@ -84,20 +84,34 @@ function WeatherTrendChart({ dataType, title, yAxisTitle, data }: IProps) {
                     height: 400,
                     title: {
                         text: title,
-                        font: { size: 16 }
+                        font: { size: 16, color: '#0e7490' },
                     },
                     margin: { l: 50, r: 20, t: 40, b: 50 },
                     xaxis: {
-                        title: 'Date',
+                        title: {
+                            text: 'Date',
+                            font: { color: '#0e7490' }
+                        },
                         tickangle: 45,
                         showgrid: true,
+                        tickfont: {
+                            color: '#0e7490'
+                        }
                     },
                     yaxis: {
-                        title: yAxisTitle,
+                        title: {
+                            text: yAxisTitle,
+                            font: { color: '#0e7490' }
+                        },
                         showgrid: true,
+                        tickfont: {
+                            color: '#0e7490'
+                        }
                     },
                     showlegend: true,
                     hovermode: 'x unified',
+                    paper_bgcolor: 'white',
+                    plot_bgcolor: 'white',
                 }}
                 config={{
                     responsive: true,

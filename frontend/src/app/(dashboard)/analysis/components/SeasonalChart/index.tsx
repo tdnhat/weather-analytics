@@ -42,10 +42,10 @@ function SeasonalChart({ dataType, title, yAxisTitle, data }: IProps) {
         }
 
         const quarterColors = {
-            1: '#7bc86c',  // soft green
-            2: '#f5d76e',  // soft yellow
-            3: '#ffb366',  // soft orange
-            4: '#85c1e9'   // soft blue
+            1: '#4caf50',  // softer green
+            2: '#f39c12',  // yellow/orange
+            3: '#e67e22',  // softer orange 
+            4: '#2980b9'   // blue
         };
 
         return Object.entries(quarterlyData).map(([key, data]) => ({
@@ -75,20 +75,31 @@ function SeasonalChart({ dataType, title, yAxisTitle, data }: IProps) {
                     height: 400,
                     title: {
                         text: title,
-                        font: { size: 16 }
+                        font: { size: 16, color: '#0e7490' },
                     },
                     margin: { l: 50, r: 20, t: 40, b: 50 },
                     xaxis: {
-                        title: 'Date',
+                        title: {
+                            text: 'Date',
+                            font: { color: '#0e7490' }
+                        },
                         tickangle: 45,
                         showgrid: true,
+                        tickfont: {
+                            color: '#0e7490'
+                        }
                     },
                     yaxis: {
-                        title: yAxisTitle,
+                        title: {
+                            text: yAxisTitle,
+                            font: { color: '#0e7490' }
+                        },
                         showgrid: true,
                     },
                     showlegend: true,
                     hovermode: 'x unified',
+                    paper_bgcolor: 'white',
+                    plot_bgcolor: 'white',
                 }}
                 config={{
                     responsive: true,

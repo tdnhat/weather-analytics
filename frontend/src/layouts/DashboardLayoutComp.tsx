@@ -20,8 +20,10 @@ function DashboardLayoutComp({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-gray-50 relative">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 pointer-events-none"
-        style={{ backgroundImage: 'url("/weather-background.jpg")' }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none"
+        // style={{ backgroundImage: 'url("/weather-background.jpg")' }}
+        style={{ backgroundImage: 'url("/bg7.jpg")' }}
+
       />
       <div className="relative z-10">
         <DashboardNav onToggleSidebar={() => setIsExpanded(!isExpanded)} />

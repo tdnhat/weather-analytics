@@ -10,7 +10,10 @@ import {
     DailyTrendsQueryParamsSchema,
     SeasonalDataDataSchema,
     SeasonalDataQueryParamsSchema,
-    SeasonalDataResponseSchema
+    SeasonalDataResponseSchema,
+    SpiderChartResponseSchema,
+    SpiderChartDataSchema,
+    SpiderChartQueryParamsSchema
 } from './contracts'
 
 export type QueryParamsWeatherDateRangeDto = z.infer<typeof QueryParamsWeatherDateRangeDtoSchema>
@@ -27,3 +30,8 @@ export type DailyTrendsQueryParams = z.infer<typeof DailyTrendsQueryParamsSchema
 export type SeasonalDataResponse = z.infer<typeof SeasonalDataResponseSchema>
 export type SeasonalDataData = z.infer<typeof SeasonalDataDataSchema>
 export type SeasonalDataQueryParams = z.infer<typeof SeasonalDataQueryParamsSchema>
+
+export type SpiderChartResponse = z.infer<typeof SpiderChartResponseSchema>
+export type SpiderChartData = z.infer<typeof SpiderChartDataSchema>
+export type SpiderChartQueryParams = z.infer<typeof SpiderChartQueryParamsSchema>
+

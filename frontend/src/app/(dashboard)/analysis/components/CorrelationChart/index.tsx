@@ -45,13 +45,14 @@ function CorrelationChart({ data }: IProps) {
                         z: matrix,
                         x: labels,
                         y: labels,
+                        line: { color: "#0e7490" },
                         type: "heatmap",
                         colorscale: "Viridis",
                         text: matrix.map(row => 
                             row.map(value => value.toFixed(2))
                         ),
                         texttemplate: "%{text}",
-                        textfont: { color: "white" },
+                        textfont: { color: "#ffffff" },
                         hoverongaps: false,
                     },
                 ]}
@@ -60,11 +61,13 @@ function CorrelationChart({ data }: IProps) {
                     height: 400,
                     title: {
                         text: "Ma trận tương quan",
-                        font: { size: 16 }
+                        font: { size: 16, color: "#0e7490" }
                     },
                     margin: { l: 50, r: 50, t: 50, b: 50 },
-                    xaxis: { side: "bottom" },
+                    xaxis: { side: "bottom", tickfont: { color: "#0e7490" } },
+                    yaxis: { tickfont: { color: "#0e7490" } },
                 }}
+
                 config={{
                     responsive: true,
                     displayModeBar: true,

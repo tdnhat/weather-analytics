@@ -20,7 +20,7 @@ function DashboardNav() {
         <nav className="fixed w-full z-10">
             <div className={`
                 flex justify-between items-center px-6 h-[var(--ds-header-height)]
-                bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-b border-gray-100
+                bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border-b border-white/30
             `}>
                 {/* Menu Button */}
                 <button 
@@ -28,12 +28,12 @@ function DashboardNav() {
                     onClick={toggleSidebar}
                     aria-label="Toggle sidebar"
                 >
-                    <FontAwesomeIcon icon={faBars} className="text-cyan-500 text-lg" />
+                    <FontAwesomeIcon icon={faBars} className="text-white text-lg" />
                 </button>
                 
                 {/* Logo */}
-                <div className="mx-auto text-xl font-bold text-cyan-500">
-                    Weather Analytics
+                <div className="mx-auto text-xl font-bold text-white">
+                    Phân tích dữ liệu thời tiết - Thừa Thiên Huế
                 </div>
             </div>
         </nav>

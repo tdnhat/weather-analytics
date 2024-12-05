@@ -99,4 +99,19 @@ export const SeasonalDataResponseSchema = z.object({
     data: z.array(SeasonalDataDataSchema)
 })
 
+export const SpiderChartDataSchema = z.object({
+    id: z.number(),
+    year: z.number(),
+    summer_quantity: z.number(),
+    winter_quantity: z.number(),
+    autumn_quantity: z.number(), 
+    spring_quantity: z.number()
+})
 
+export const SpiderChartQueryParamsSchema = z.object({
+    year: z.number()
+})
+
+export const SpiderChartResponseSchema = z.object({
+    data: z.array(SpiderChartDataSchema)
+})

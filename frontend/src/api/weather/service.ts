@@ -7,7 +7,9 @@ import {
     DailyTrendsQueryParams,
     DailyTrendsResponse,
     SeasonalDataQueryParams,
-    SeasonalDataResponse
+    SeasonalDataResponse,
+    SpiderChartQueryParams,
+    SpiderChartResponse
 } from './types'
 
 export class WeatherRawService {
@@ -33,5 +35,11 @@ export class WeatherRawService {
         params: SeasonalDataQueryParams
     }) {
         return httpGet<SeasonalDataResponse>('/analysis/seasonal', config)
+    }
+
+    static getSpiderChart(config: {
+        params: SpiderChartQueryParams
+    }) {
+        return httpGet<SpiderChartResponse>('/clustering/spider-chart', config)
     }
 }

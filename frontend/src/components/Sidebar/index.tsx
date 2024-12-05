@@ -4,11 +4,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartLine } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faChartPie, faHexagonNodes, faChartSimple } from '@fortawesome/free-solid-svg-icons';
 
 const sidebarItems = [
-    { href: '/pattern1', label: 'Raw Data', icon: faChartLine },
-    { href: '/analysis', label: 'Analysis Dashboard', icon: faChartLine },
+    { href: '/raw', label: 'Raw Data', icon: faChartLine },
+    { href: '/analysis', label: 'Analysis', icon: faChartPie },
+    { href: '/clustering', label: 'Clustering', icon: faHexagonNodes },
+    { href: '/prediction', label: 'Prediction', icon: faChartSimple },
 ];
 
 function Sidebar() {
@@ -28,7 +30,7 @@ function Sidebar() {
         <aside className={`
             h-[calc(100vh-var(--ds-header-height))] 
             transition-all duration-200 ease-in-out overflow-hidden
-            bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-100
+            bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border-r border-white/30
             ${isExpanded ? 'w-64' : 'w-16'}
         `}>
             <div className="p-2 space-y-2">
@@ -40,8 +42,8 @@ function Sidebar() {
                             relative px-3 py-3 flex items-center space-x-4 justify-start rounded-lg group
                             backdrop-filter backdrop-blur-sm bg-opacity-30 
                             ${pathname === item.href 
-                                ? 'bg-gradient-to-r from-cyan-400/70 to-cyan-500/70 text-gray-100' 
-                                : 'text-cyan-500 hover:bg-white/10'}
+                                ? 'bg-gradient-to-r from-cyan-400/70 to-cyan-700/30 text-gray-100' 
+                                : 'text-white hover:bg-white/10'}
                             ${isExpanded ? 'h-12' : 'h-12'}
                         `}
                     >
