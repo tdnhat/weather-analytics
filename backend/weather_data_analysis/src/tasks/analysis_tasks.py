@@ -10,10 +10,10 @@ from ..config.logging import logger
 from celery.signals import worker_ready, worker_shutdown
 
 # Initialize Redis client
-redis_client = Redis.from_url(
-    settings.REDIS_URL,
-    ssl_cert_reqs=ssl.CERT_NONE
-)
+# redis_client = Redis.from_url(
+#     settings.REDIS_URL,
+#     ssl_cert_reqs=ssl.CERT_NONE
+# )
 
 celery_app = Celery('weather_analysis',
     broker=settings.REDIS_URL,

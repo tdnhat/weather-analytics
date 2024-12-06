@@ -10,10 +10,10 @@ from celery.signals import worker_ready, worker_shutdown
 from ..schedulers.prediction_schedulers import WeatherPredictionScheduler
 
 # Initialize Redis client
-redis_client = Redis.from_url(
-    settings.REDIS_URL,
-    ssl_cert_reqs=ssl.CERT_NONE
-)
+# redis_client = Redis.from_url(
+#     settings.REDIS_URL,
+#     ssl_cert_reqs=ssl.CERT_NONE
+# )
 
 celery_app = Celery('weather_prediction',
     broker=settings.REDIS_URL,

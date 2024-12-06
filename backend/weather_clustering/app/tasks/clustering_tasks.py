@@ -10,10 +10,10 @@ from celery.signals import worker_ready, worker_shutdown
 from ..schedulers.clustering_scheduler import WeatherClusteringScheduler
 
 # Initialize Redis client
-redis_client = Redis.from_url(
-    settings.REDIS_URL,
-    ssl_cert_reqs=ssl.CERT_NONE
-)
+# redis_client = Redis.from_url(
+#     settings.REDIS_URL,
+#     ssl_cert_reqs=ssl.CERT_NONE
+# )
 
 celery_app = Celery('weather_clustering',
     broker=settings.REDIS_URL,

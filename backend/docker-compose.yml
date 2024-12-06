@@ -1,19 +1,17 @@
 services:
-  # weather.data_ingestion:
-  #   container_name: weather.data_ingestion
-  #   build:
-  #     context: ./weather_data_ingestion
-  #     dockerfile: Dockerfile
-  #   env_file:
-  #     - ./weather_data_ingestion/.env
-  #   depends_on:
-  #     weather.databaseapi:
-  #       condition: service_healthy
-  #   networks:
-  #     - app-network
-  #   volumes:
-  #     - ./weather_data_ingestion:/app
-  #   restart: always
+  weather.data_ingestion:
+    container_name: weather.data_ingestion
+    image: nhathuy16092003/weatherdataingestion:latest
+    env_file:
+      - ./weather_data_ingestion/.env
+    depends_on:
+      weather.databaseapi:
+        condition: service_healthy
+    networks:
+      - app-network
+    volumes:
+      - ./weather_data_ingestion:/app
+    restart: always
 
   weather.databaseapi:
     container_name: weather.databaseapi
@@ -32,45 +30,45 @@ services:
       - app-network
     restart: always
 
-  # zookeeper:
-  #   image: confluentinc/cp-zookeeper:7.5.1
-  #   volumes:
-  #     - zookeeper_data:/var/lib/zookeeper/data
-  #     - zookeeper_log:/var/lib/zookeeper/log
-  #   networks:
-  #     - app-network
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.1
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+      - zookeeper_log:/var/lib/zookeeper/log
+    networks:
+      - app-network
 
-  # kafka:
-  #   image: confluentinc/cp-kafka:7.5.1
-  #   volumes:
-  #     - kafka_data:/var/lib/kafka/data
-  #   networks:
-  #     - app-network
+  kafka:
+    image: confluentinc/cp-kafka:7.5.1
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - app-network
 
-  # kafka-ui:
-  #   image: provectuslabs/kafka-ui:latest    
-  #   networks:
-  #     - app-network
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest    
+    networks:
+      - app-network
 
-  # debezium:
-  #   image: debezium/connect:2.5
-  #   networks:
-  #     - app-network
+  debezium:
+    image: debezium/connect:2.5
+    networks:
+      - app-network
   
   # debezium-connector-config:
   #   image: curlimages/curl
   #   networks:
   #     - app-network
 
-  # weather.dataanalysis.worker:
-  #   image: nhathuy16092003/dataanalysis:latest
-  #   networks:
-  #     - app-network
+  weather.dataanalysis.worker:
+    image: nhathuy16092003/dataanalysis:latest
+    networks:
+      - app-network
 
-  # weather.dataanalysis.beat:
-  #   image: nhathuy16092003/dataanalysis:latest
-  #   networks:
-  #     - app-network
+  weather.dataanalysis.beat:
+    image: nhathuy16092003/dataanalysis:latest
+    networks:
+      - app-network
 
   weather.prediction:
     image: nhathuy16092003/prediction:latest
@@ -79,30 +77,30 @@ services:
     networks:
       - app-network
 
-  # weather.prediction.worker:
-  #   image: nhathuy16092003/prediction:latest
-  #   networks:
-  #     - app-network
+  weather.prediction.worker:
+    image: nhathuy16092003/prediction:latest
+    networks:
+      - app-network
 
-  # weather.prediction.beat:
-  #   image: nhathuy16092003/prediction:latest
-  #   networks:
-  #     - app-network
+  weather.prediction.beat:
+    image: nhathuy16092003/prediction:latest
+    networks:
+      - app-network
 
   weather.clustering:
     image: nhathuy16092003/clustering:latest
     networks:
       - app-network  
 
-  # weather.clustering.worker:
-  #   image: nhathuy16092003/clustering:latest
-  #   networks:
-  #     - app-network
+  weather.clustering.worker:
+    image: nhathuy16092003/clustering:latest
+    networks:
+      - app-network
 
-  # weather.clustering.beat:
-  #   image: nhathuy16092003/clustering:latest
-  #   networks:
-  #     - app-network
+  weather.clustering.beat:
+    image: nhathuy16092003/clustering:latest
+    networks:
+      - app-network
 
 volumes:
   logs:
