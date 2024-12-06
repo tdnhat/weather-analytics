@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.context.database import Base, engine
-from src.api.routes.weather_raw_routes import router as weather_raw_router
 from src.api.routes.analysis import router as analysis_router
+from src.api.routes.clustering import router as clustering_router
+from src.api.routes.prediction import router as prediction_router
+from src.api.routes.weather_raw_routes import router as weather_raw_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -18,9 +20,9 @@ app.add_middleware(
 
 app.include_router(weather_raw_router)
 app.include_router(analysis_router)
+app.include_router(clustering_router)
+app.include_router(prediction_router)
 
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
-
-

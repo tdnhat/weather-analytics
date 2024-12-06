@@ -1,3 +1,4 @@
+import traceback
 from typing import List
 import httpx
 from ..models.analysis import DailyAnalysis, CorrelationAnalysis, SeasonalAnalysis
@@ -23,17 +24,19 @@ class DatabaseApiService:
             logger.error(f"Lỗi khi lưu daily analysis: {str(e)}")
             raise
 
-    async def save_correlation_analysis(self, analysis: CorrelationAnalysis):
-        logger.info(f"Đang lưu phân tích tương quan cho ngày {analysis.date}")
+    async def save_correlation_analysis(self, analysis: List[CorrelationAnalysis]):
         try:
             async with httpx.AsyncClient() as client:
-                response = await client.post(
-                    f"{self.base_url}/api/analysis/correlation",
-                    json=analysis.model_dump()
-                )
-                response.raise_for_status()
+                for correlation_data in analysis:
+                    logger.info(f"Đang lưu phân tích tương quan cho ngày {correlation_data.year}")
+                    response = await client.post(
+                        f"{self.base_url}/api/analysis/correlation",
+                        json=correlation_data.model_dump()
+                    )
+                    response.raise_for_status()
             logger.info("Lưu phân tích tương quan thành công")
         except Exception as e:
+            logger.error(f"Chi tiết lỗi: {traceback.format_exc()}")
             logger.error(f"Lỗi khi lưu correlation analysis: {str(e)}")
             raise
 

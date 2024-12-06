@@ -69,7 +69,7 @@ class BaseWeatherConsumer:
             raise
 
     def _process_message(self, data: dict) -> HourlyWeatherData:
-        time = datetime.fromtimestamp(data['time'] / 1000).strftime('%Y-%m-%d %H:%M:%S')
+        time = datetime.fromtimestamp(data['time_epoch']).strftime('%Y-%m-%d %H:%M:%S')
 
         return HourlyWeatherData(
             Id=data['id'],

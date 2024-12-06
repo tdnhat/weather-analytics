@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Ignore specific files
+/register-connector.sh
+
 # C extensions
 *.so
 

@@ -40,7 +40,7 @@ class SeasonalAnalysis(BaseModel):
     min_temp: float
     
 class CorrelationAnalysis(BaseModel):
-    date: str
+    year:int
     temp_humidity_corr:float
     temp_pressure_corr:float
     temp_wind_corr:float

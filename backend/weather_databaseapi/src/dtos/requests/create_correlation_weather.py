@@ -3,13 +3,10 @@ from datetime import datetime
 
 class CreateCorrelationWeatherDto(BaseModel):
     model_config = {
-        'from_attributes': True,
-        'json_encoders': {
-            datetime: lambda v: v.isoformat()  # Convert datetime to ISO format string
-        }
+        'from_attributes': True
     }
 
-    date: str
+    year: int
     temp_humidity_corr:float
     temp_pressure_corr:float
     temp_wind_corr:float

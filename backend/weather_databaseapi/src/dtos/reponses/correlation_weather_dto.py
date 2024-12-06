@@ -4,12 +4,9 @@ from datetime import datetime
 class CorrelationWeatherDto(BaseModel):
     model_config = {
         'from_attributes': True,
-        'json_encoders': {
-            datetime: lambda v: v.isoformat()  # Convert datetime to ISO format string
-        }
     }
 
-    date: str
+    year: int
     temp_humidity_corr: float
     temp_pressure_corr: float
     temp_wind_corr: float
